@@ -236,7 +236,9 @@ export default function Layout(props: PropsWithChildren) {
   const activePathName = navigation.find((item) => item.isActive)?.title;
 
   if (session.status === "loading")
-    return <Spinner message={t("common.status.loading")} />;
+    return (
+      <Spinner message={t("common.status.loading")} suppressHydrationWarning />
+    );
 
   // If the user has a token, but does not exist in the database, sign them out
   if (
