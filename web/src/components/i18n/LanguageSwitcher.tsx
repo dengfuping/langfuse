@@ -10,14 +10,15 @@ import {
 } from "@/src/components/ui/dropdown-menu";
 import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
-import { supportedLanguages } from "@/src/i18n";
+import { supportedLanguages, DEFAULT_LANGUAGE } from "@/src/i18n";
 
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState<string>("en-US");
+  const [currentLanguage, setCurrentLanguage] =
+    useState<string>(DEFAULT_LANGUAGE);
 
   useEffect(() => {
-    setCurrentLanguage(i18n.language || "en-US");
+    setCurrentLanguage(i18n.language || DEFAULT_LANGUAGE);
   }, [i18n.language]);
 
   const handleLanguageChange = async (

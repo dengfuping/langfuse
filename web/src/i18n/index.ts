@@ -9,19 +9,25 @@ export const supportedLanguages = [
   { code: "zh-Hans", name: "简体中文" },
 ];
 
+export const DEFAULT_LANGUAGE = "en-US";
+
 const requireSilent = async (lang: string, namespace: string) => {
   let res;
   try {
     res = (await import(`./locales/${lang}/${namespace}`)).default;
   } catch {
-    res = (await import(`./locales/en-US/${namespace}`)).default;
+    res = (await import(`./locales/${DEFAULT_LANGUAGE}/${namespace}`)).default;
   }
 
   return res;
 };
 
 const getNamespaces = (): string[] => {
-  const context = (require as any).context("./locales/en-US", false, /\.ts$/);
+  const context = (require as any).context(
+    `./locales/${DEFAULT_LANGUAGE}`,
+    false,
+    /\.ts$/,
+  );
   return context
     .keys()
     .map((key: string) => key.replace("./", "").replace(".ts", ""));
@@ -43,20 +49,19 @@ export const loadLangResources = async (lang: string) => {
   return resources;
 };
 
-// Load en-US resources first to make sure fallback works
 const getInitialTranslations = () => {
-  const en_USResources = NAMESPACES.reduce(
+  const translation = NAMESPACES.reduce(
     (acc: Record<string, any>, ns: string, index: number) => {
       acc[camelCase(NAMESPACES[index])] = require(
-        `./locales/en-US/${ns}`,
+        `./locales/${DEFAULT_LANGUAGE}/${ns}`,
       ).default;
       return acc;
     },
     {} as Record<string, any>,
   );
   return {
-    "en-US": {
-      translation: en_USResources,
+    [DEFAULT_LANGUAGE]: {
+      translation,
     },
   };
 };
@@ -67,7 +72,7 @@ if (!i18n.isInitialized) {
     .use(initReactI18next)
     .init({
       lng: undefined,
-      fallbackLng: "en-US",
+      fallbackLng: DEFAULT_LANGUAGE,
       supportedLngs: supportedLanguages.map((lang) => lang.code),
       detection: {
         order: ["localStorage", "navigator", "htmlTag"],
