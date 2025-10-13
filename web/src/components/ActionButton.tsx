@@ -10,7 +10,9 @@ import { HoverCardPortal } from "@radix-ui/react-hover-card";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
-const createButtonStateMessages = (t: (key: string) => string) => ({
+const createButtonStateMessages = (
+  t: (key: string, options?: any) => string,
+) => ({
   limitReached: (current: number, max: number) =>
     t("common.messages.limitReached", { current, max }),
   noAccess: t("common.messages.noAccess"),
