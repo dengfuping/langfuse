@@ -26,7 +26,7 @@ const defaultHeights: Record<RowHeight, string> = {
   l: "h-64",
 };
 
-export type RowHeight = (typeof heightOptions)[number]["id"];
+export type RowHeight = "s" | "m" | "l";
 export type CustomHeights = Record<RowHeight, string>;
 
 export const getRowHeightTailwindClass = (

@@ -34,6 +34,7 @@ import { api } from "@/src/utils/api";
 import {
   type AutomationDomain,
   type ActionTypes,
+  type JobConfigState,
   webhookActionFilterOptions,
 } from "@langfuse/shared";
 import { InlineFilterBuilder } from "@/src/features/filters/components/filter-builder";

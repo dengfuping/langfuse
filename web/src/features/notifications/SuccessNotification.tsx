@@ -1,6 +1,5 @@
 import { ActionButton } from "@/src/components/ActionButton";
 import { BadgeCheck, X } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
 export type SuccessNotificationProps = {
   title: string;
@@ -18,7 +17,6 @@ export const SuccessNotification: React.FC<SuccessNotificationProps> = ({
   onDismiss,
   link,
 }) => {
-  const { t } = useTranslation();
   return (
     <div className="flex justify-between">
       <div className="flex min-w-[300px] flex-1 flex-col gap-2">

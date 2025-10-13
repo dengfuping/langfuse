@@ -123,6 +123,7 @@ const PostHogIntegrationSettings = ({
   projectId: string;
   isLoading: boolean;
 }) => {
+  const { t } = useTranslation();
   const capture = usePostHogClientCapture();
   const posthogForm = useForm({
     resolver: zodResolver(posthogIntegrationFormSchema),

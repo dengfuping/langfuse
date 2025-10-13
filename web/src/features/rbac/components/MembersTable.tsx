@@ -450,6 +450,7 @@ const OrgRoleDropdown = ({
   userId: string;
   hasCudAccess: boolean;
 }) => {
+  const { t } = useTranslation();
   const utils = api.useUtils();
   const session = useSession();
   const mut = api.members.updateOrgMembership.useMutation({
@@ -508,6 +509,7 @@ const ProjectRoleDropdown = ({
   projectId: string;
   hasCudAccess: boolean;
 }) => {
+  const { t } = useTranslation();
   const utils = api.useUtils();
   const session = useSession();
   const mut = api.members.updateProjectRole.useMutation({

@@ -119,7 +119,7 @@ export const SupportMenuDropdown = () => {
     }
 
     return items;
-  }, [uiCustomization]);
+  }, [uiCustomization, t]);
 
   const { isMobile } = useSidebar();
 

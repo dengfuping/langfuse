@@ -143,6 +143,7 @@ export const ApiKeyRender = ({
   scope: ApiKeyScope;
   generatedKeys?: { secretKey: string; publicKey: string };
 }) => {
+  const { t } = useTranslation();
   const uiCustomization = useUiCustomization();
   return (
     <>

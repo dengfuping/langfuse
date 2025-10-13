@@ -13,6 +13,7 @@ import { Alert, AlertDescription } from "@/src/components/ui/alert";
 import { api } from "@/src/utils/api";
 import { SlackConnectButton } from "@/src/features/slack/components/SlackConnectButton";
 import { SlackDisconnectButton } from "@/src/features/slack/components/SlackDisconnectButton";
+import { useTranslation } from "react-i18next";
 
 /**
  * Props for the SlackConnectionCard component
@@ -50,6 +51,7 @@ export const SlackConnectionCard: React.FC<SlackConnectionCardProps> = ({
   onConnectionChange,
   showConnectButton = true,
 }) => {
+  const { t } = useTranslation();
   // Get Slack integration status
   const {
     data: integrationStatus,

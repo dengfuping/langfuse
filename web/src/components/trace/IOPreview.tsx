@@ -281,6 +281,7 @@ export const OpenAiMessageView: React.FC<{
   projectIdForPromptButtons,
   currentView = "json",
 }) => {
+  const { t } = useTranslation();
   const COLLAPSE_THRESHOLD = 3;
   const [isCollapsed, setCollapsed] = useState(
     collapseLongHistory && messages.length > COLLAPSE_THRESHOLD ? true : null,

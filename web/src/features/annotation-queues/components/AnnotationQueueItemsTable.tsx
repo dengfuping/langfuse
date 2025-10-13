@@ -166,6 +166,7 @@ export function AnnotationQueueItemsTable({
   projectId: string;
   queueId: string;
 }) {
+  const { t } = useTranslation();
   const [paginationState, setPaginationState] = useQueryParams({
     pageIndex: withDefault(NumberParam, 0),
     pageSize: withDefault(NumberParam, 50),

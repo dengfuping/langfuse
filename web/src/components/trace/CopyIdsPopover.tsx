@@ -9,6 +9,7 @@ import {
 import { cn } from "@/src/utils/tailwind";
 import { Label } from "@/src/components/ui/label";
 import { copyTextToClipboard } from "@/src/utils/clipboard";
+import { useTranslation } from "react-i18next";
 
 interface IdItem {
   name: string;
@@ -22,6 +23,7 @@ export const CopyIdsPopover = ({
   idItems: IdItem[];
   className?: string;
 }) => {
+  const { t } = useTranslation();
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const handleCopy = (textToCopy: string) => {

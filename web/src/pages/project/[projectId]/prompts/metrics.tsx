@@ -137,7 +137,7 @@ export default function PromptVersionTable({
     isColumnLoading: isTraceColumnLoading,
   } = useIndividualScoreColumns<PromptVersionTableRow>({
     projectId,
-    scoreColumnPrefix: t("prompt.columns.trace"),
+    scoreColumnPrefix: "Trace",
     scoreColumnKey: "traceScores",
     showAggregateViewOnly: true,
   });
@@ -147,7 +147,7 @@ export default function PromptVersionTable({
     isColumnLoading: isGenerationColumnLoading,
   } = useIndividualScoreColumns<PromptVersionTableRow>({
     projectId,
-    scoreColumnPrefix: t("prompt.columns.generation"),
+    scoreColumnPrefix: "Generation",
     scoreColumnKey: "generationScores",
     showAggregateViewOnly: true,
   });
@@ -366,12 +366,12 @@ export default function PromptVersionTable({
             traceScores: verifyAndPrefixScoreDataAgainstKeys(
               scoreKeysAndProps,
               prompt.traceScores ?? {},
-              t("prompt.metrics.trace"),
+              "Trace",
             ),
             generationScores: verifyAndPrefixScoreDataAgainstKeys(
               scoreKeysAndProps,
               prompt.observationScores ?? {},
-              t("prompt.metrics.generation"),
+              "Generation",
             ),
             lastUsed:
               prompt.lastUsed?.toLocaleString() ??

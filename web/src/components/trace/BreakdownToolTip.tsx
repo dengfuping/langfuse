@@ -107,6 +107,7 @@ export const BreakdownTooltip = ({
               details={aggregatedDetails}
               isCost={isCost}
               formatValue={(v) => formatValueWithPadding(v, maxDecimals)}
+              t={t}
             />
 
             {/* Total */}
@@ -173,9 +174,15 @@ interface OtherSectionProps {
   details: Details;
   isCost: boolean;
   formatValue: (value: number) => string;
+  t: (key: string) => string;
 }
 
-const OtherSection = ({ details, isCost, formatValue }: OtherSectionProps) => {
+const OtherSection = ({
+  details,
+  isCost,
+  formatValue,
+  t,
+}: OtherSectionProps) => {
   const otherEntries = Object.entries(details)
     .filter(
       ([key]) =>

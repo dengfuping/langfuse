@@ -202,6 +202,7 @@ function getDefaultAdapterParams(
   adapter: LLMAdapter,
 ): Omit<UIModelParams, "provider" | "model"> {
   switch (adapter) {
+    default:
     // Docs: https://platform.openai.com/docs/api-reference/chat/create
     case LLMAdapter.OpenAI:
       return {

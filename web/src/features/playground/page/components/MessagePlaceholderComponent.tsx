@@ -56,7 +56,7 @@ export const MessagePlaceholderComponent: React.FC<{
         setError(t("playground.errors.invalidJsonFormat"));
       }
     },
-    [name, updateMessagePlaceholderValue],
+    [name, updateMessagePlaceholderValue, t],
   );
 
   const UsedIcon = isUsed ? CheckCircle2 : Circle;

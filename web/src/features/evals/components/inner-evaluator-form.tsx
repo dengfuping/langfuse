@@ -98,6 +98,7 @@ const TracesPreview = memo(
     projectId: string;
     filterState: z.infer<typeof singleFilter>[];
   }) => {
+    const { t } = useTranslation();
     const dateRange = useMemo(() => {
       return {
         from: getDateFromOption({

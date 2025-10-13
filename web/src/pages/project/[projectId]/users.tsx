@@ -369,23 +369,23 @@ const UsersTable = () => {
               : {
                   isLoading: false,
                   isError: false,
-                  data: userRowData.rows?.map((t) => {
+                  data: userRowData.rows?.map((row) => {
                     return {
-                      userId: t.id,
-                      environment: t.environment ?? undefined,
+                      userId: row.id,
+                      environment: row.environment ?? undefined,
                       firstEvent:
-                        t.firstTrace?.toLocaleString() ??
+                        row.firstTrace?.toLocaleString() ??
                         t("user.table.noEventYet"),
                       lastEvent:
-                        t.lastTrace?.toLocaleString() ??
+                        row.lastTrace?.toLocaleString() ??
                         t("user.table.noEventYet"),
                       totalEvents: compactNumberFormatter(
-                        Number(t.totalTraces ?? 0) +
-                          Number(t.totalObservations ?? 0),
+                        Number(row.totalTraces ?? 0) +
+                          Number(row.totalObservations ?? 0),
                       ),
-                      totalTokens: compactNumberFormatter(t.totalTokens ?? 0),
+                      totalTokens: compactNumberFormatter(row.totalTokens ?? 0),
                       totalCost: usdFormatter(
-                        t.sumCalculatedTotalCost ?? 0,
+                        row.sumCalculatedTotalCost ?? 0,
                         2,
                         2,
                       ),

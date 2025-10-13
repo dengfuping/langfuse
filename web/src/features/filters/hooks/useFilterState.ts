@@ -19,6 +19,7 @@ import { usersTableCols } from "@/src/server/api/definitions/usersTable";
 import useSessionStorage from "@/src/components/useSessionStorage";
 import { evalConfigFilterColumns } from "@/src/server/api/definitions/evalConfigsTable";
 import { evalExecutionsFilterCols } from "@/src/server/api/definitions/evalExecutionsTable";
+import { useTranslation } from "react-i18next";
 
 const DEBUG_QUERY_STATE = false;
 
@@ -95,9 +96,9 @@ const getCommaArrayParam = (table: TableName, t: (key: string) => string) => ({
 export const useQueryFilterState = (
   initialState: FilterState = [],
   table: TableName,
-  t: (key: string) => string,
   projectId?: string, // Passing projectId is expected as filters might differ across projects. However, we can't call hooks conditionally. There is a case in the prompts table where this will only be used if projectId is defined, but it's not defined in all cases.
 ) => {
+  const { t } = useTranslation();
   const [sessionFilterState, setSessionFilterState] =
     useSessionStorage<FilterState>(
       !!projectId ? `${table}FilterState-${projectId}` : `${table}FilterState`,
