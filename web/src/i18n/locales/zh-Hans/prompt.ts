@@ -3,6 +3,30 @@ const translation = {
     title: "提示",
     description: "在 Langfuse 中管理和版本化您的提示。通过 UI 和 SDK 编辑和更新它们。通过 SDK 检索生产版本。在文档中了解更多信息。",
   },
+  onboarding: {
+    getStartedTitle: "开始使用提示管理",
+    getStartedDescription: "Langfuse 提示管理帮助您集中管理、版本控制和协作迭代您的提示。开始使用提示管理以提高您的 LLM 应用程序的性能和可维护性。",
+    createPrompt: "创建提示",
+    learnMore: "了解更多",
+  },
+  features: {
+    decoupledFromCode: {
+      title: "与代码解耦",
+      description: "无需重新部署应用程序即可部署新提示，使更新更快更容易",
+    },
+    editInUIOrProgrammatically: {
+      title: "在 UI 中或编程方式编辑",
+      description: "非技术用户可以在 UI 中轻松编辑提示。开发人员可以通过 API 和 SDK 选择性地以编程方式更新提示",
+    },
+    performanceOptimized: {
+      title: "性能优化",
+      description: "客户端缓存防止您的应用程序出现延迟或可用性问题",
+    },
+    compareMetrics: {
+      title: "比较指标",
+      description: "跟踪不同提示版本的延迟、成本和评估指标",
+    },
+  },
   columns: {
     trace: "跟踪",
     generation: "生成",

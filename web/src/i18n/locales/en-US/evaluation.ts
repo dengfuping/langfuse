@@ -194,6 +194,47 @@ const translation = {
       title: "Scores",
       description: "A scores is an evaluation of a traces or observations. It can be created from user feedback, model-based evaluations, or manual review. See docs to learn more.",
     },
+    onboarding: {
+      getStartedTitle: "Get Started with Scores",
+      getStartedDescription:
+        "Scores allow you to evaluate the quality/safety of your LLM application through user feedback, model-based evaluations, or manual review. Scores can be used programmatically via the API and SDKs to track custom metrics.",
+      learnMore: "Learn More",
+    },
+    features: {
+      collectUserFeedback: {
+        title: "Collect user feedback",
+        description: "Gather thumbs up/down feedback from users to identify high and low quality outputs",
+      },
+      runModelBasedEvaluations: {
+        title: "Run model-based evaluations",
+        description: "Use LLMs to automatically evaluate your application's outputs",
+      },
+      trackQualityMetrics: {
+        title: "Track quality metrics",
+        description: "Monitor quality metrics over time to identify trends and issues",
+      },
+      useCustomMetrics: {
+        title: "Use custom metrics",
+        description: "Langfuse's scores are flexible and can be used to track any metric that's associated with an LLM application",
+      },
+    },
+    dashboard: {
+      title: "Dashboard",
+      modelLatencies: "Model latencies",
+      latenciesPerGeneration: "Latencies (seconds) per LLM generation",
+      percentiles: {
+        p50: "50th Percentile",
+        p75: "75th Percentile",
+        p90: "90th Percentile",
+        p95: "95th Percentile",
+        p99: "99th Percentile",
+      },
+      scoresAnalytics: "Scores Analytics",
+      aggregateScoresAndAverages: "Aggregate scores and averages over time",
+      selectScoreToViewAnalytics: "Select a score to view analytics",
+      searchScore: "Search score...",
+      select: "Select",
+    },
     errors: {
       maxValueMustBeGreater: "Maximum value must be greater than Minimum value.",
       atLeastOneCategoryRequired: "At least one category is required for categorical data types.",

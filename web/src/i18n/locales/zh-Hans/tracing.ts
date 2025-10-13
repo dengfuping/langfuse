@@ -61,10 +61,37 @@ const translation = {
       description: "观察捕获应用程序中的单个函数调用。查看文档了解更多信息。",
     },
   },
-  session: {
-    pages: {
-      title: "会话",
-      description: "会话是相关跟踪的集合，例如对话或线程。首先，向跟踪添加 sessionId。",
+  onboarding: {
+    getStartedTitle: "开始使用 LLM 跟踪",
+    getStartedDescription: "跟踪允许您跟踪应用程序/代理中的每个 LLM 调用和其他相关逻辑。Langfuse 中的嵌套跟踪有助于理解正在发生的事情并识别问题的根本原因。",
+    configureTracing: "配置跟踪",
+    viewDocumentation: "查看文档",
+  },
+  detail: {
+    title: "跟踪详情",
+  },
+  tabs: {
+    preview: "预览",
+    scores: "评分",
+    tree: "树形",
+    timeline: "时间线",
+  },
+  features: {
+    fullContextCapture: {
+      title: "完整上下文捕获",
+      description: "跟踪完整的执行流程，包括 API 调用、上下文、提示、并行性等",
+    },
+    costMonitoring: {
+      title: "成本监控",
+      description: "跟踪应用程序中的模型使用情况和成本",
+    },
+    basisForEvaluation: {
+      title: "评估基础",
+      description: "添加评估分数以识别问题并跟踪指标随时间的变化",
+    },
+    openAndMultimodal: {
+      title: "开放和多模态",
+      description: "Langfuse 跟踪可以包含图像、音频和其他模态。您可以完全自定义它们以满足您的需求",
     },
   },
 };

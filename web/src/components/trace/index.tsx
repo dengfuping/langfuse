@@ -556,7 +556,9 @@ export function Trace(props: {
                           )
                         }
                       />
-                      <span className="text-sm">Timeline</span>
+                      <span className="text-sm">
+                        {t("tracing.tabs.timeline")}
+                      </span>
                     </label>
                   </div>
                 )}

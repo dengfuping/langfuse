@@ -29,6 +29,13 @@ const translation = {
     tokenizerConfigDescription: "The config for the tokenizer. Required for openai. See the",
     forDetails: "for details.",
   },
+  labels: {
+    model: "Model",
+    modelName: "Model Name",
+  },
+  settings: {
+    noApiKey: "No API key configured",
+  },
   success: {
     modelUpdated: "Model updated",
     modelCreated: "Model created",

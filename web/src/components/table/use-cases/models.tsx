@@ -158,7 +158,7 @@ export default function ModelTable({ projectId }: { projectId: string }) {
         return (
           <div className="flex items-center gap-2">
             <span>
-              {t("project.settings.models.pricesPerUnit")} {priceUnit}
+              {t("project.settings.models.prices")} {priceUnit}
             </span>
             <PriceUnitSelector />
           </div>

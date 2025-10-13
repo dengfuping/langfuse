@@ -3,6 +3,29 @@ const translation = {
     title: "用户",
     description: "通过向您的跟踪添加 userId 将 Langfuse 中的数据归因于用户。查看文档了解更多信息。",
   },
+  onboarding: {
+    getStartedTitle: "开始使用用户跟踪",
+    getStartedDescription: "将成本、评估和其他 LLM 应用程序指标与特定用户关联。开始跟踪用户以更好地了解他们如何与您的 LLM 应用程序交互。",
+    gettingStarted: "要开始跟踪用户，您需要向跟踪添加 'userId'。查看{documentation}了解更多详细信息。",
+  },
+  features: {
+    trackUserInteractions: {
+      title: "跟踪用户交互",
+      description: "通过向跟踪添加 userId 将 Langfuse 中的数据归因于特定用户",
+    },
+    analyzeUserBehavior: {
+      title: "分析用户行为",
+      description: "了解不同用户如何与您的 LLM 应用程序交互",
+    },
+    filterByUserSegments: {
+      title: "按用户群体筛选",
+      description: "比较不同用户群体的性能以识别模式",
+    },
+    monitorUsageMetrics: {
+      title: "监控使用指标",
+      description: "按用户跟踪令牌使用情况、成本和其他指标",
+    },
+  },
   filters: {
     timestamp: "时间戳",
   },

@@ -194,6 +194,46 @@ const translation = {
       title: "评分",
       description: "评分是对跟踪或观察的评估。它可以从用户反馈、基于模型的评估或手动审查中创建。查看文档了解更多信息。",
     },
+    onboarding: {
+      getStartedTitle: "开始使用评分",
+      getStartedDescription: "评分允许您通过用户反馈、基于模型的评估或手动审查来评估您的 LLM 应用程序的质量/安全性。评分可以通过 API 和 SDK 以编程方式使用来跟踪自定义指标。",
+      learnMore: "了解更多",
+    },
+    features: {
+      collectUserFeedback: {
+        title: "收集用户反馈",
+        description: "收集用户的点赞/点踩反馈以识别高质量和低质量的输出",
+      },
+      runModelBasedEvaluations: {
+        title: "运行基于模型的评估",
+        description: "使用 LLM 自动评估您的应用程序输出",
+      },
+      trackQualityMetrics: {
+        title: "跟踪质量指标",
+        description: "随时间监控质量指标以识别趋势和问题",
+      },
+      useCustomMetrics: {
+        title: "使用自定义指标",
+        description: "Langfuse 的评分很灵活，可用于跟踪与 LLM 应用程序相关的任何指标",
+      },
+    },
+    dashboard: {
+      title: "仪表板",
+      modelLatencies: "模型延迟",
+      latenciesPerGeneration: "每个 LLM 生成的延迟（秒）",
+      percentiles: {
+        p50: "50% 分位数",
+        p75: "75% 分位数",
+        p90: "90% 分位数",
+        p95: "95% 分位数",
+        p99: "99% 分位数",
+      },
+      scoresAnalytics: "评分分析",
+      aggregateScoresAndAverages: "随时间聚合的评分和平均值",
+      selectScoreToViewAnalytics: "选择一个评分以查看分析",
+      searchScore: "搜索评分...",
+      select: "选择",
+    },
     errors: {
       maxValueMustBeGreater: "最大值必须大于最小值。",
       atLeastOneCategoryRequired: "分类数据类型至少需要一个类别。",

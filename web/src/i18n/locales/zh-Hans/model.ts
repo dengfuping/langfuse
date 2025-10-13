@@ -27,6 +27,13 @@ const translation = {
     tokenizerConfigDescription: "分词器的配置。OpenAI 需要此配置。查看",
     forDetails: "了解详细信息。",
   },
+  labels: {
+    model: "模型",
+    modelName: "模型名称",
+  },
+  settings: {
+    noApiKey: "未配置 API 密钥",
+  },
   success: {
     modelUpdated: "模型已更新",
     modelCreated: "模型已创建",

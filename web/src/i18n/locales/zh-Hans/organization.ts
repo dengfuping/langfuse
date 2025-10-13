@@ -11,6 +11,7 @@ const translation = {
   forms: {
     projectName: "项目名称",
     organizationName: "组织名称",
+    create: "创建",
     type: "类型",
     typeDescription: "什么最能描述您的组织？",
     pleaseChoose: "请选择",

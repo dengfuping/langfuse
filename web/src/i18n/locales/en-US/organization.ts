@@ -11,6 +11,7 @@ const translation = {
   forms: {
     projectName: "Project name",
     organizationName: "Organization name",
+    create: "Create",
     type: "Type",
     typeDescription: "What would best describe your organization?",
     pleaseChoose: "Please choose",

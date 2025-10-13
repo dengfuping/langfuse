@@ -29,9 +29,9 @@ export default function Sessions() {
   return (
     <Page
       headerProps={{
-        title: t("tracing.session.pages.title"),
+        title: t("session.pages.title"),
         help: {
-          description: t("tracing.session.pages.description"),
+          description: t("session.pages.description"),
           href: "https://langfuse.com/docs/observability/features/sessions",
         },
       }}

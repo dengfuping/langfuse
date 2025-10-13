@@ -106,7 +106,7 @@ export default function PosthogIntegrationSettings() {
             Data synced until:{" "}
             {state.data?.lastSyncAt
               ? new Date(state.data.lastSyncAt).toLocaleString()
-              : "Never (pending)"}
+              : t("common.labels.neverPending")}
           </p>
         </>
       )}

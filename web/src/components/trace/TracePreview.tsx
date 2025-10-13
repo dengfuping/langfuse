@@ -22,6 +22,7 @@ import { useMemo, useState } from "react";
 import { usdFormatter } from "@/src/utils/numbers";
 import { calculateDisplayTotalCost } from "@/src/components/trace/lib/helpers";
 import { useIsAuthenticatedAndProjectMember } from "@/src/features/auth/hooks";
+import { useTranslation } from "react-i18next";
 import {
   TabsBar,
   TabsBarContent,
@@ -57,6 +58,7 @@ export const TracePreview = ({
   commentCounts?: Map<string, number>;
   viewType?: "detailed" | "focused";
 }) => {
+  const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useQueryParam(
     "view",
     withDefault(StringParam, "preview"),
@@ -245,9 +247,13 @@ export const TracePreview = ({
         >
           {viewType === "detailed" && (
             <TabsBarList>
-              <TabsBarTrigger value="preview">Preview</TabsBarTrigger>
+              <TabsBarTrigger value="preview">
+                {t("tracing.tabs.preview")}
+              </TabsBarTrigger>
               {showScoresTab && (
-                <TabsBarTrigger value="scores">Scores</TabsBarTrigger>
+                <TabsBarTrigger value="scores">
+                  {t("tracing.tabs.scores")}
+                </TabsBarTrigger>
               )}
               {selectedTab.includes("preview") && isPrettyViewAvailable && (
                 <Tabs

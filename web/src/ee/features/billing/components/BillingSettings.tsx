@@ -28,11 +28,11 @@ import {
 import { usePostHogClientCapture } from "@/src/features/posthog-analytics/usePostHogClientCapture";
 import { stripeProducts } from "@/src/ee/features/billing/utils/stripeProducts";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 import { ActionButton } from "@/src/components/ActionButton";
 import { useState } from "react";
 import { chatAvailable, openChat } from "@/src/features/support-chat/PlainChat";
 import { UsageAlerts } from "./UsageAlerts";
-import { useTranslation } from "react-i18next";
 
 export const BillingSettings = () => {
   const { t } = useTranslation();
@@ -101,7 +101,7 @@ const OrganizationUsageChart = () => {
             <Text>
               {usage.data.billingPeriod
                 ? `${usageType} in current billing period`
-                : `${usageType} / last 30d`}
+                : `${usageType} ${t("common.labels.unitsLast30d")}`}
             </Text>
             <Metric>{numberFormatter(usage.data.usageCount, 0)}</Metric>
             {plan === "cloud:hobby" && (
@@ -109,7 +109,8 @@ const OrganizationUsageChart = () => {
                 <Flex className="mt-4">
                   <Text>{`${numberFormatter((usage.data.usageCount / hobbyPlanLimit) * 100)}%`}</Text>
                   <Text>
-                    Plan limit: {compactNumberFormatter(hobbyPlanLimit)}
+                    {t("common.labels.planLimit")}:{" "}
+                    {compactNumberFormatter(hobbyPlanLimit)}
                   </Text>
                 </Flex>
                 <MarkerBar

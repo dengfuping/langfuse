@@ -187,6 +187,7 @@ export function EvalVersionDropdown(props: {
   defaultOption?: EvalTemplate;
   onSelect?: (template: EvalTemplate) => void;
 }) {
+  const { t } = useTranslation();
   const capture = usePostHogClientCapture();
   const handleSelect = (value: string) => {
     const selectedTemplate = props.options?.find(
@@ -231,6 +232,7 @@ export function UpdateTemplate({
   setIsEditing: (isEditing: boolean) => void;
   isCustom: boolean;
 }) {
+  const { t } = useTranslation();
   const hasAccess = useHasProjectAccess({
     projectId,
     scope: "evalTemplate:CUD",

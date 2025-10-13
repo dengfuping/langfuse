@@ -23,6 +23,8 @@ const translation = {
       usage: "Usage",
       other: "Other",
       learnMore: "Learn more about {{scope}} API keys",
+      none: "None",
+      created: "Created",
       quickstartExamples: {
         internalDocumentation: "See your internal documentation for details on how to set up Langfuse in your organization.",
         quickstartPython: "See Quickstart and Python docs for more details and an end-to-end example.",
@@ -65,7 +67,7 @@ const translation = {
       addModelDefinition: "Add model definition",
       modelName: "Model Name",
       matchPattern: "Match Pattern",
-      pricesPerUnit: "Prices per unit",
+      prices: "Prices",
       tokenizer: "Tokenizer",
       tokenizerConfig: "Tokenizer Config",
       lastUsed: "Last used",
@@ -74,6 +76,7 @@ const translation = {
       perUnit: "per unit",
       per1K: "per 1K",
       per1M: "per 1M",
+      actions: "Actions",
     },
     protectedPromptLabels: {
       title: "Protected Prompt Labels",
@@ -86,6 +89,8 @@ const translation = {
       action: "Action",
       active: "Active",
       archived: "Archived",
+      name: "Name",
+      status: "Status",
       provideOptionalDescription: "Provide an optional description for this score configuration.",
     },
     members: {

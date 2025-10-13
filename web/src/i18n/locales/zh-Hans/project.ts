@@ -23,6 +23,8 @@ const translation = {
       usage: "用法",
       other: "其他",
       learnMore: "了解更多关于 {{scope}} API 密钥的信息",
+      none: "无",
+      created: "创建时间",
       quickstartExamples: {
         internalDocumentation: "查看您的内部文档，了解如何在您的组织中设置 Langfuse 的详细信息。",
         quickstartPython: "查看快速入门和 Python 文档，了解更多详细信息和端到端示例。",
@@ -65,7 +67,7 @@ const translation = {
       addModelDefinition: "添加模型定义",
       modelName: "模型名称",
       matchPattern: "匹配模式",
-      pricesPerUnit: "每单位价格",
+      prices: "价格",
       tokenizer: "分词器",
       tokenizerConfig: "分词器配置",
       lastUsed: "最后使用",
@@ -74,6 +76,7 @@ const translation = {
       perUnit: "每单位",
       per1K: "每 1K",
       per1M: "每 1M",
+      actions: "操作",
     },
     protectedPromptLabels: {
       title: "受保护的提示标签",
@@ -86,6 +89,8 @@ const translation = {
       action: "操作",
       active: "活跃",
       archived: "已归档",
+      name: "名称",
+      status: "状态",
       provideOptionalDescription: "为此分数配置提供可选描述。",
     },
     members: {

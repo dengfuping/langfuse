@@ -3,6 +3,31 @@ const translation = {
     title: "Prompts",
     description: "Manage and version your prompts in Langfuse. Edit and update them via the UI and SDK. Retrieve the production version via the SDKs. Learn more in the docs.",
   },
+  onboarding: {
+    getStartedTitle: "Get Started with Prompt Management",
+    getStartedDescription:
+      "Langfuse Prompt Management helps you centrally manage, version control, and collaboratively iterate on your prompts. Start using prompt management to improve your LLM application's performance and maintainability.",
+    createPrompt: "Create Prompt",
+    learnMore: "Learn More",
+  },
+  features: {
+    decoupledFromCode: {
+      title: "Decoupled from code",
+      description: "Deploy new prompts without application redeployment, making updates faster and easier",
+    },
+    editInUIOrProgrammatically: {
+      title: "Edit in UI or programmatically",
+      description: "Non-technical users can easily edit prompts in the UI. Developers can optionally update prompts programmatically via the API and SDKs",
+    },
+    performanceOptimized: {
+      title: "Performance optimized",
+      description: "Client-side caching prevents latency or availability issues for your applications",
+    },
+    compareMetrics: {
+      title: "Compare metrics",
+      description: "Track latency, cost, and evaluation metrics across different prompt versions",
+    },
+  },
   columns: {
     trace: "Trace",
     generation: "Generation",
