@@ -61,10 +61,10 @@ export function DatasetsOnboarding({ projectId }: { projectId: string }) {
           />
         ),
       }}
-      secondaryAction={{
-        label: t("dataset.onboarding.learnMore"),
-        href: "https://langfuse.com/docs/datasets",
-      }}
+      // secondaryAction={{
+      //   label: t("dataset.onboarding.learnMore"),
+      //   href: "https://langfuse.com/docs/datasets",
+      // }}
     />
   );
 }

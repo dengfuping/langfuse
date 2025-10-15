@@ -89,13 +89,13 @@ export function ApiKeyList(props: { entityId: string; scope: ApiKeyScope }) {
             ? t("project.settings.apiKeys.projectApiKeys")
             : startCase(`${scope} API keys`)
         }
-        help={{
-          description: t("project.settings.apiKeys.learnMore", { scope }),
-          href:
-            scope === "project"
-              ? "https://langfuse.com/docs/api#authentication"
-              : "https://langfuse.com/docs/api#org-scoped-routes",
-        }}
+        // help={{
+        //   description: t("project.settings.apiKeys.learnMore", { scope }),
+        //   href:
+        //     scope === "project"
+        //       ? "https://langfuse.com/docs/api#authentication"
+        //       : "https://langfuse.com/docs/api#org-scoped-routes",
+        // }}
       />
       <Card className="mb-4 overflow-hidden">
         <Table>

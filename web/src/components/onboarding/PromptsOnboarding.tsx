@@ -40,10 +40,10 @@ export function PromptsOnboarding({ projectId }: { projectId: string }) {
         label: t("prompt.onboarding.createPrompt"),
         href: `/project/${projectId}/prompts/new`,
       }}
-      secondaryAction={{
-        label: t("prompt.onboarding.learnMore"),
-        href: "https://langfuse.com/docs/prompt-management/get-started",
-      }}
+      // secondaryAction={{
+      //   label: t("prompt.onboarding.learnMore"),
+      //   href: "https://langfuse.com/docs/prompt-management/get-started",
+      // }}
     />
   );
 }

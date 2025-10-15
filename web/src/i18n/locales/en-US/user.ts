@@ -6,7 +6,7 @@ const translation = {
   onboarding: {
     getStartedTitle: "Get Started with User Tracking",
     getStartedDescription: "Correlate costs, evaluations and other LLM Application metrics to specific users. Start tracking users to better understand how they interact with your LLM applications.",
-    gettingStarted: "To start tracking users, you need to add a 'userId' to your traces. See <documentation> for more details.",
+    gettingStarted: "To start tracking users, you need to add a 'userId' to your traces.",
   },
   features: {
     trackUserInteractions: {

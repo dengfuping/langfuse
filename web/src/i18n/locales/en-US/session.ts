@@ -6,7 +6,7 @@ const translation = {
   onboarding: {
     getStartedTitle: "Get Started with Sessions",
     getStartedDescription: "Sessions allow you to group related traces together, such as a conversation or thread. Use sessions to track interactions over time and analyze conversation/thread flows.",
-    gettingStarted: "To start using sessions, you need to add a `sessionId` to your traces. See <documentation> for more details.",
+    gettingStarted: "To start using sessions, you need to add a `sessionId` to your traces.",
   },
   features: {
     groupRelatedTraces: {

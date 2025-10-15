@@ -6,7 +6,7 @@ const translation = {
   onboarding: {
     getStartedTitle: "开始使用用户跟踪",
     getStartedDescription: "将成本、评估和其他 LLM 应用程序指标与特定用户关联。开始跟踪用户以更好地了解他们如何与您的 LLM 应用程序交互。",
-    gettingStarted: "要开始跟踪用户，您需要向跟踪添加 'userId'。查看<documentation>了解更多详细信息。",
+    gettingStarted: "要开始跟踪用户，您需要向跟踪添加 'userId'。",
   },
   features: {
     trackUserInteractions: {

@@ -208,7 +208,8 @@ export default function Dashboard() {
             onChange={useDebounce(setUserFilterState)}
           />
         </div>
-        {uiCustomization?.feedbackHref === undefined && (
+        {/* adapt for PowerRAG */}
+        {/* {uiCustomization?.feedbackHref === undefined && (
           <FeedbackButtonWrapper
             title={t("dashboard.home.requestChart")}
             description={t("dashboard.home.requestChartDescription")}
@@ -228,7 +229,7 @@ export default function Dashboard() {
               {t("dashboard.home.requestChart")}
             </Button>
           </FeedbackButtonWrapper>
-        )}
+        )} */}
       </div>
       <div className="grid w-full grid-cols-1 gap-3 overflow-hidden lg:grid-cols-2 xl:grid-cols-6">
         <TracesBarListChart
