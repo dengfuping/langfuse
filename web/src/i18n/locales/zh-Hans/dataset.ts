@@ -199,6 +199,7 @@ const translation = {
   datasetRunModal: {
     title: "开始数据集运行",
     description: "数据集运行允许您在数据集上测试应用程序或提示的迭代。",
+    descriptionWithLink: "数据集运行允许您在数据集上测试应用程序或提示的迭代。<link>了解更多</link>。",
     learnMore: "了解更多",
     learnMoreLink: "这里",
     viaUserInterface: {
@@ -226,6 +227,7 @@ const translation = {
   newDatasetRunForm: {
     title: "新建数据集运行",
     description: "开始数据集运行以在数据集上测试提示版本。",
+    descriptionWithLink: "开始数据集运行以在数据集上测试提示版本。<link>查看文档</link>了解更多。",
     learnMore: "查看文档",
     learnMoreLink: "了解更多",
     back: "← 返回",
@@ -237,6 +239,8 @@ const translation = {
     searchPrompts: "搜索提示词...",
     noPromptFound: "未找到提示词。",
     version: "版本",
+    versionWithNumber: "版本 {{version}}",
+    versionNumber: "版本 {{version}}",
     noVersionFound: "未找到版本。",
     noVersionsAvailable: "无可用版本",
     dataset: "数据集",
@@ -249,6 +253,8 @@ const translation = {
     noAccessToEvaluators: "您无权查看评估器。请联系您的管理员升级您的角色。",
     validatingConfiguration: "验证配置中...",
     checkingDatasetItems: "检查数据集项与提示词变量和占位符的匹配",
+    validationMatchesDescription: "数据集项与提示词变量/占位符的匹配：",
+    validationExclusionNote: "缺少所有必需变量和占位符的项目将从数据集运行中排除。",
     start: "开始",
     edit: "编辑",
     configure: "配置",

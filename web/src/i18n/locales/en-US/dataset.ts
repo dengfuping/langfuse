@@ -201,6 +201,7 @@ const translation = {
   datasetRunModal: {
     title: "Start Dataset Run",
     description: "Dataset runs allow to test iterations of your application or prompt on a dataset.",
+    descriptionWithLink: "Dataset runs allow to test iterations of your application or prompt on a dataset. <link>Learn more about dataset runs here</link>.",
     learnMore: "Learn more about dataset runs",
     learnMoreLink: "here",
     viaUserInterface: {
@@ -228,6 +229,7 @@ const translation = {
   newDatasetRunForm: {
     title: "New Dataset Run",
     description: "Start a dataset run to test a prompt version on a dataset.",
+    descriptionWithLink: "Start a dataset run to test a prompt version on a dataset. <link>See documentation</link> to learn more.",
     learnMore: "See documentation",
     learnMoreLink: "to learn more",
     back: "← Back",
@@ -239,6 +241,8 @@ const translation = {
     searchPrompts: "Search prompts...",
     noPromptFound: "No prompt found.",
     version: "Version",
+    versionWithNumber: "Version {{version}}",
+    versionNumber: "Version {{version}}",
     noVersionFound: "No version found.",
     noVersionsAvailable: "No versions available",
     dataset: "Dataset",
@@ -252,6 +256,8 @@ const translation = {
     noAccessToEvaluators: "You do not have access to view evaluators. Please contact your admin to upgrade your role.",
     validatingConfiguration: "Validating configuration...",
     checkingDatasetItems: "Checking dataset items against prompt variables and placeholders",
+    validationMatchesDescription: "Matches between dataset items and prompt variables/placeholders:",
+    validationExclusionNote: "Items missing all required variables and placeholders will be excluded from the dataset run.",
     start: "Start",
     edit: "Edit",
     configure: "Configure",

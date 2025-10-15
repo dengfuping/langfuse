@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/src/components/ui/button";
 import { Code2, Wand2, Cog, Zap } from "lucide-react";
 import { api } from "@/src/utils/api";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import {
   Card,
   CardDescription,
@@ -102,15 +102,18 @@ export const CreateExperimentsForm = ({
         <DialogHeader>
           <DialogTitle>{t("dataset.datasetRunModal.title")}</DialogTitle>
           <DialogDescription>
-            {t("dataset.datasetRunModal.description")}{" "}
-            <Link
-              href="https://langfuse.com/docs/evaluation/dataset-runs/datasets"
-              target="_blank"
-              className="underline"
-            >
-              {t("dataset.datasetRunModal.learnMoreLink")}
-            </Link>
-            .
+            <Trans
+              i18nKey="dataset.datasetRunModal.descriptionWithLink"
+              components={{
+                link: (
+                  <Link
+                    href="https://langfuse.com/docs/evaluation/dataset-runs/datasets"
+                    target="_blank"
+                    className="underline"
+                  />
+                ),
+              }}
+            />
           </DialogDescription>
         </DialogHeader>
         <DialogBody className="pb-8">

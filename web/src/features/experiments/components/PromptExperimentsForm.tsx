@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { Button } from "@/src/components/ui/button";
 import {
   FormControl,
@@ -277,15 +277,18 @@ export const PromptExperimentsForm = ({
         )}
         <DialogTitle>{t("dataset.newDatasetRunForm.title")}</DialogTitle>
         <DialogDescription>
-          {t("dataset.newDatasetRunForm.description")}{" "}
-          <Link
-            href="https://langfuse.com/docs/evaluation/dataset-runs/native-run"
-            target="_blank"
-            className="underline"
-          >
-            {t("dataset.newDatasetRunForm.learnMore")}
-          </Link>{" "}
-          {t("dataset.newDatasetRunForm.learnMoreLink")}.
+          <Trans
+            i18nKey="dataset.newDatasetRunForm.descriptionWithLink"
+            components={{
+              link: (
+                <Link
+                  href="https://langfuse.com/docs/evaluation/dataset-runs/native-run"
+                  target="_blank"
+                  className="underline"
+                />
+              ),
+            }}
+          />
         </DialogDescription>
       </DialogHeader>
       <Form {...form}>
@@ -408,7 +411,9 @@ export const PromptExperimentsForm = ({
                           className="w-1/3 justify-between px-2 font-normal"
                         >
                           {selectedPromptVersion
-                            ? `${t("dataset.newDatasetRunForm.version")} ${selectedPromptVersion}`
+                            ? t("dataset.newDatasetRunForm.versionWithNumber", {
+                                version: selectedPromptVersion,
+                              })
                             : t("dataset.newDatasetRunForm.version")}
                           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                         </Button>
@@ -438,7 +443,10 @@ export const PromptExperimentsForm = ({
                                         form.clearErrors("promptId");
                                       }}
                                     >
-                                      Version {prompt.version}
+                                      {t(
+                                        "dataset.newDatasetRunForm.versionNumber",
+                                        { version: prompt.version },
+                                      )}
                                       <CheckIcon
                                         className={cn(
                                           "ml-auto h-4 w-4",
@@ -644,8 +652,19 @@ export const PromptExperimentsForm = ({
                       <CircleCheck className="h-4 w-4" />
                     </CardTitle>
                     <div className="text-sm">
-                      Matches between dataset items and prompt
-                      variables/placeholders
+                      <Trans
+                        i18nKey="dataset.newDatasetRunForm.validationMatchesDescription"
+                        values={{
+                          totalItems: validationResult.data?.isValid
+                            ? validationResult.data.totalItems
+                            : "unknown",
+                        }}
+                        components={{
+                          ul: (
+                            <ul className="my-2 ml-2 list-inside list-disc" />
+                          ),
+                        }}
+                      />
                       <ul className="my-2 ml-2 list-inside list-disc">
                         {Object.entries(
                           validationResult.data.variablesMap ?? {},
@@ -658,8 +677,9 @@ export const PromptExperimentsForm = ({
                           </li>
                         ))}
                       </ul>
-                      Items missing all required variables and placeholders will
-                      be excluded from the dataset run.
+                      <p>
+                        {t("dataset.newDatasetRunForm.validationExclusionNote")}
+                      </p>
                     </div>
                   </CardHeader>
                 </Card>
