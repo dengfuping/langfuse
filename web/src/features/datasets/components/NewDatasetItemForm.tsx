@@ -276,7 +276,7 @@ export const NewDatasetItemForm = (props: {
                 name="input"
                 render={({ field }) => (
                   <FormItem className="flex flex-col gap-2">
-                    <FormLabel>{t("dataset.form.input")}</FormLabel>
+                    <FormLabel>{t("common.labels.input")}</FormLabel>
                     <FormControl>
                       <CodeMirrorEditor
                         mode="json"

@@ -65,7 +65,7 @@ export function AnnotationQueuesTable({ projectId }: { projectId: string }) {
   const columns: LangfuseColumnDef<RowData>[] = [
     {
       accessorKey: "key",
-      header: t("annotation-queue.queuesTable.name"),
+      header: t("annotationQueue.queuesTable.name"),
       id: "key",
       size: 150,
       isPinned: true,
@@ -81,7 +81,7 @@ export function AnnotationQueuesTable({ projectId }: { projectId: string }) {
     },
     {
       accessorKey: "description",
-      header: t("annotation-queue.queuesTable.description"),
+      header: t("annotationQueue.queuesTable.description"),
       id: "description",
       enableHiding: true,
       size: 200,
@@ -101,21 +101,21 @@ export function AnnotationQueuesTable({ projectId }: { projectId: string }) {
     },
     {
       accessorKey: "countCompletedItems",
-      header: t("annotation-queue.queuesTable.completedItems"),
+      header: t("annotationQueue.queuesTable.completedItems"),
       id: "countCompletedItems",
       enableHiding: true,
       size: 90,
     },
     {
       accessorKey: "countPendingItems",
-      header: t("annotation-queue.queuesTable.pendingItems"),
+      header: t("annotationQueue.queuesTable.pendingItems"),
       id: "countPendingItems",
       enableHiding: true,
       size: 90,
     },
     {
       accessorKey: "scoreConfigs",
-      header: t("annotation-queue.queuesTable.scoreConfigs"),
+      header: t("annotationQueue.queuesTable.scoreConfigs"),
       id: "scoreConfigs",
       enableHiding: true,
       size: 200,
@@ -149,7 +149,7 @@ export function AnnotationQueuesTable({ projectId }: { projectId: string }) {
     },
     {
       accessorKey: "processAction",
-      header: t("annotation-queue.queuesTable.process"),
+      header: t("annotationQueue.queuesTable.process"),
       id: "processAction",
       isPinned: true,
       cell: ({ row }) => {
@@ -173,7 +173,7 @@ export function AnnotationQueuesTable({ projectId }: { projectId: string }) {
     },
     {
       accessorKey: "actions",
-      header: t("annotation-queue.queuesTable.actions"),
+      header: t("annotationQueue.queuesTable.actions"),
       id: "actions",
       size: 70,
       isPinned: true,
@@ -184,14 +184,14 @@ export function AnnotationQueuesTable({ projectId }: { projectId: string }) {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="h-8 w-8 p-0">
                 <span className="sr-only">
-                  {t("annotation-queue.queuesTable.openMenu")}
+                  {t("annotationQueue.queuesTable.openMenu")}
                 </span>
                 <MoreVertical className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>
-                {t("annotation-queue.queuesTable.actions")}
+                {t("annotationQueue.queuesTable.actions")}
               </DropdownMenuLabel>
               <div className="flex flex-col space-y-0.5">
                 <CreateOrEditAnnotationQueueButton

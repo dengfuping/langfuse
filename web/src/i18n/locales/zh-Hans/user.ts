@@ -6,7 +6,7 @@ const translation = {
   onboarding: {
     getStartedTitle: "开始使用用户跟踪",
     getStartedDescription: "将成本、评估和其他 LLM 应用程序指标与特定用户关联。开始跟踪用户以更好地了解他们如何与您的 LLM 应用程序交互。",
-    gettingStarted: "要开始跟踪用户，您需要向跟踪添加 'userId'。查看{documentation}了解更多详细信息。",
+    gettingStarted: "要开始跟踪用户，您需要向跟踪添加 'userId'。查看<documentation>了解更多详细信息。",
   },
   features: {
     trackUserInteractions: {
@@ -23,7 +23,7 @@ const translation = {
     },
     monitorUsageMetrics: {
       title: "监控使用指标",
-      description: "按用户跟踪令牌使用情况、成本和其他指标",
+      description: "按用户跟踪 token 使用情况、成本和其他指标",
     },
   },
   filters: {
@@ -44,11 +44,12 @@ const translation = {
     lastEventDescription: "为此用户记录的最新跟踪。",
     totalEvents: "总事件数",
     totalEventsDescription: "用户的总事件数，包括跟踪和观察。查看数据模型了解更多详细信息。",
-    totalTokens: "总令牌数",
-    totalTokensDescription: "用户在所有生成中使用的总令牌数。",
+    totalTokens: "总 token 数",
+    totalTokensDescription: "用户在所有生成中使用的总 token 数。",
     totalCost: "总成本",
     totalCostDescription: "用户在所有生成中的总成本。",
     noEventYet: "暂无事件",
+    environment: "环境",
   },
 };
 

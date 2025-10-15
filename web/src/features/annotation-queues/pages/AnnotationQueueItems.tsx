@@ -50,7 +50,7 @@ export default function QueueItems() {
         itemType: "ANNOTATION_QUEUE",
         breadcrumb: [
           {
-            name: t("annotation-queue.item.annotationQueues"),
+            name: t("annotationQueue.item.annotationQueues"),
             href: `/project/${projectId}/annotation-queues`,
           },
         ],
@@ -77,13 +77,13 @@ export default function QueueItems() {
         </div>
         <SidePanel
           mobileTitle={
-            queue.data?.name ?? t("annotation-queue.item.queueDetails")
+            queue.data?.name ?? t("annotationQueue.item.queueDetails")
           }
           id="queue-details"
         >
           <SidePanelHeader>
             <SidePanelTitle>
-              {queue.data?.name ?? t("annotation-queue.item.queueDetails")}
+              {queue.data?.name ?? t("annotationQueue.item.queueDetails")}
             </SidePanelTitle>
             <CreateOrEditAnnotationQueueButton
               projectId={projectId}
@@ -102,7 +102,7 @@ export default function QueueItems() {
                 )}
                 <div className="flex flex-col gap-2">
                   <SubHeaderLabel
-                    title={t("annotation-queue.queuesTable.scoreConfigs")}
+                    title={t("annotationQueue.queuesTable.scoreConfigs")}
                   />
                   <div className="flex flex-wrap gap-2">
                     {queue.data?.scoreConfigs.map((scoreConfig) => (

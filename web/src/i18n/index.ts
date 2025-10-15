@@ -23,6 +23,33 @@ const requireSilent = async (lang: string, namespace: string) => {
 };
 
 const getNamespaces = (): string[] => {
+  // Check if we're in a browser environment
+  if (typeof window === "undefined") {
+    // Server-side: return a static list of known namespaces
+    return [
+      "annotation-queue",
+      "auth",
+      "automation",
+      "common",
+      "dashboard",
+      "dataset",
+      "ee",
+      "evaluation",
+      "model",
+      "onboarding",
+      "organization",
+      "playground",
+      "project",
+      "prompt",
+      "rbac",
+      "session",
+      "tracing",
+      "ui",
+      "user",
+      "widget",
+    ];
+  }
+
   const context = (require as any).context(
     `./locales/${DEFAULT_LANGUAGE}`,
     false,

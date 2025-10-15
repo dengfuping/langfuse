@@ -110,7 +110,7 @@ export default function ModelTable({ projectId }: { projectId: string }) {
     {
       accessorKey: "maintainer",
       id: "maintainer",
-      header: "Maintainer",
+      header: t("evaluation.templatesTable.maintainer"),
       headerTooltip: {
         description: modelConfigDescriptions.maintainer,
       },
@@ -128,7 +128,9 @@ export default function ModelTable({ projectId }: { projectId: string }) {
                 )}
               </TooltipTrigger>
               <TooltipContent>
-                {isLangfuse ? "Langfuse maintained" : "User maintained"}
+                {isLangfuse
+                  ? t("evaluation.eval.pages.langfuseMaintained")
+                  : t("evaluation.eval.pages.userMaintained")}
               </TooltipContent>
             </Tooltip>
           </div>

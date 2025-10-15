@@ -185,13 +185,13 @@ export function DatasetRunItemsTable(
         return <>{totalCost}</>;
       },
     },
-    { ...getScoreGroupColumnProps(isColumnLoading), columns: scoreColumns },
+    { ...getScoreGroupColumnProps(isColumnLoading, t), columns: scoreColumns },
     {
       accessorKey: "input",
       header:
         "datasetItemId" in props
           ? t("dataset.runItemsTable.traceInput")
-          : t("dataset.runItemsTable.input"),
+          : t("common.labels.input"),
       id: "input",
       size: 200,
       enableHiding: true,

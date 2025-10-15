@@ -168,7 +168,7 @@ export default function Dataset() {
             }
           : undefined,
         tabsProps: {
-          tabs: getDatasetTabs(projectId, datasetId),
+          tabs: getDatasetTabs(projectId, datasetId, t),
           activeTab: DATASET_TABS.RUNS,
         },
         actionButtonsRight: (
@@ -183,7 +183,9 @@ export default function Dataset() {
                   onClick={() => capture("dataset_run:new_form_open")}
                 >
                   <FlaskConical className="h-4 w-4" />
-                  <span className="ml-2 hidden md:block">New dataset run</span>
+                  <span className="ml-2 hidden md:block">
+                    {t("dataset.actions.newDatasetRun")}
+                  </span>
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-h-[90vh] overflow-y-auto">
@@ -269,7 +271,7 @@ export default function Dataset() {
                   <DropdownMenuItem asChild>
                     <Link href={`/project/${projectId}/evals?target=dataset`}>
                       <Bot className="ml-1 mr-2 h-4 w-4" />
-                      Manage Evaluators
+                      {t("dataset.actions.manageEvaluators")}
                     </Link>
                   </DropdownMenuItem>
                 )}
@@ -298,8 +300,9 @@ export default function Dataset() {
           <DialogContent className="max-h-[90vh] max-w-screen-md overflow-y-auto">
             <DialogHeader>
               <DialogTitle>
-                {selectedEvaluatorData.evaluator.id ? "Edit" : "Configure"}{" "}
-                Evaluator
+                {selectedEvaluatorData.evaluator.id
+                  ? t("dataset.newDatasetRunForm.editEvaluator")
+                  : t("dataset.newDatasetRunForm.configureEvaluator")}
               </DialogTitle>
             </DialogHeader>
             <EvaluatorForm

@@ -351,11 +351,11 @@ export default function EvaluatorTable({ projectId }: { projectId: string }) {
       result: result,
       maintainer: jobConfig.evalTemplate
         ? jobConfig.evalTemplate.projectId
-          ? t("evaluation.eval.evaluatorTable.userMaintained")
+          ? t("evaluation.eval.pages.userMaintained")
           : jobConfig.evalTemplate.name.startsWith(RAGAS_TEMPLATE_PREFIX)
-            ? t("evaluation.eval.evaluatorTable.langfuseAndRagasMaintained")
-            : t("evaluation.eval.evaluatorTable.langfuseMaintained")
-        : t("evaluation.eval.evaluatorTable.notAvailable"),
+            ? t("evaluation.eval.pages.ragasMaintained")
+            : t("evaluation.eval.pages.langfuseMaintained")
+        : t("evaluation.eval.pages.notAvailable"),
     };
   };
 

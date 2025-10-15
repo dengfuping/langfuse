@@ -417,7 +417,7 @@ export function DatasetRunsTable(props: {
       },
     },
     {
-      ...getScoreGroupColumnProps(isRunScoreColumnLoading, {
+      ...getScoreGroupColumnProps(isRunScoreColumnLoading, t, {
         accessorKey: "runScores",
         header: t("dataset.runsTable.runLevelScores"),
         id: "runScores",
@@ -425,7 +425,7 @@ export function DatasetRunsTable(props: {
       columns: runScoreColumns,
     },
     {
-      ...getScoreGroupColumnProps(isColumnLoading, {
+      ...getScoreGroupColumnProps(isColumnLoading, t, {
         accessorKey: "runItemScores",
         header: t("dataset.runsTable.aggregatedRunItemsScores"),
         id: "runItemScores",

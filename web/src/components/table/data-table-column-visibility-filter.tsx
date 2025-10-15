@@ -185,6 +185,7 @@ function GroupVisibilityHeader<TData, TValue>({
   children: React.ReactNode;
   toggleAll: () => void;
 }) {
+  const { t } = useTranslation();
   const { attributes, isDragging, listeners, setNodeRef, transform } =
     useSortable({
       id: column.accessorKey,
@@ -243,8 +244,8 @@ function GroupVisibilityHeader<TData, TValue>({
               }}
             >
               {groupVisibleCount === groupTotalCount
-                ? "Deselect All"
-                : "Select All"}
+                ? t("common.select.deselectAll")
+                : t("common.select.selectAll")}
             </Button>
             {isOpen ? (
               <ChevronDown className="h-4 w-4" />

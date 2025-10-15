@@ -15,7 +15,7 @@ const translation = {
     errors: {
       notFound: "未找到跟踪",
       notFoundDescription: "跟踪仍在处理中或已被删除。",
-      sdkUpgradeRequired: "请升级 SDK，因为 URL 架构已更改。",
+      sdkUpgradeRequired: "请升级 SDK，因为 URL Schema 已更改。",
       noAccess: "您无权访问此跟踪。",
     },
     ids: {
@@ -24,13 +24,19 @@ const translation = {
       copyId: "复制 ID",
     },
     io: {
-      input: "输入",
-      output: "输出",
       statusMessage: "状态消息",
       additionalInput: "附加输入",
       placeholder: "占位符",
       unnamedPlaceholder: "未命名占位符",
       hideHistory: "隐藏历史",
+    },
+    tableHeaders: {
+      observationLevels: "观察级别",
+      traceName: "跟踪名称",
+      inputTokens: "输入 Tokens",
+      outputTokens: "输出 Tokens",
+      inputCost: "输入成本",
+      outputCost: "输出成本",
     },
     breakdown: {
       costBreakdown: "成本分解",

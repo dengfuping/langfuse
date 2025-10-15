@@ -38,9 +38,9 @@ export default function AnnotationQueues() {
   return (
     <Page
       headerProps={{
-        title: t("annotation-queue.item.annotationQueues"),
+        title: t("annotationQueue.item.annotationQueues"),
         help: {
-          description: t("annotation-queue.queuesTable.noQueuesDescription"),
+          description: t("annotationQueue.queuesTable.noQueuesDescription"),
           href: "https://langfuse.com/docs/evaluation/evaluation-methods/annotation",
         },
         actionButtonsRight: (

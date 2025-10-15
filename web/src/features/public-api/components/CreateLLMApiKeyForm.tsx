@@ -308,11 +308,15 @@ export function CreateLLMApiKeyForm({
       name="extraHeaders"
       render={() => (
         <FormItem>
-          <FormLabel>Extra Headers</FormLabel>
+          <FormLabel>
+            {t("project.settings.llmConnections.extraHeaders")}
+          </FormLabel>
           <FormDescription>
-            Optional additional HTTP headers to include with requests towards
-            LLM provider. All header values stored encrypted{" "}
-            {isLangfuseCloud ? "on our servers" : "in your database"}.
+            {t("project.settings.llmConnections.extraHeadersDescription")}{" "}
+            {isLangfuseCloud
+              ? t("project.settings.llmConnections.onOurServers")
+              : t("project.settings.llmConnections.inYourDatabase")}
+            .
           </FormDescription>
 
           {headerFields.map((header, index) => (
@@ -348,7 +352,7 @@ export function CreateLLMApiKeyForm({
             className="w-full"
           >
             <PlusIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
-            Add Header
+            {t("project.settings.llmConnections.addHeader")}
           </Button>
         </FormItem>
       )}
@@ -701,7 +705,9 @@ export function CreateLLMApiKeyForm({
               name="baseURL"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>API Base URL</FormLabel>
+                  <FormLabel>
+                    {t("project.settings.llmConnections.apiBaseUrl")}
+                  </FormLabel>
                   <FormDescription>
                     Please add the base URL in the following format (or
                     compatible API):
@@ -736,7 +742,7 @@ export function CreateLLMApiKeyForm({
               >
                 <span>
                   {showAdvancedSettings
-                    ? "Hide advanced settings"
+                    ? t("project.settings.llmConnections.hideAdvancedSettings")
                     : t("project.settings.llmConnections.showAdvancedSettings")}
                 </span>
                 <ChevronDown
@@ -754,17 +760,25 @@ export function CreateLLMApiKeyForm({
                 name="baseURL"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>API Base URL</FormLabel>
+                    <FormLabel>
+                      {t("project.settings.llmConnections.apiBaseUrl")}
+                    </FormLabel>
                     <FormDescription>
-                      Leave blank to use the default base URL for the given LLM
-                      adapter.{" "}
+                      {t(
+                        "project.settings.llmConnections.apiBaseUrlDescription",
+                      )}{" "}
                       {currentAdapter === LLMAdapter.OpenAI && (
-                        <span>OpenAI default: https://api.openai.com/v1</span>
+                        <span>
+                          {t("project.settings.llmConnections.openaiDefault")}{" "}
+                          https://api.openai.com/v1
+                        </span>
                       )}
                       {currentAdapter === LLMAdapter.Anthropic && (
                         <span>
-                          Anthropic default: https://api.anthropic.com
-                          (excluding /v1/messages)
+                          {t(
+                            "project.settings.llmConnections.anthropicDefault",
+                          )}{" "}
+                          https://api.anthropic.com (excluding /v1/messages)
                         </span>
                       )}
                     </FormDescription>

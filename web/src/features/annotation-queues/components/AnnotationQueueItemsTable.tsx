@@ -67,7 +67,7 @@ const QueueItemTableMultiSelectAction = ({
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button disabled={selectedItemIds.length < 1}>
-            {t("annotation-queue.itemsTable.actionsSelected", {
+            {t("annotationQueue.itemsTable.actionsSelected", {
               count: selectedItemIds.length,
             })}
             <ChevronDown className="h-5 w-5" />
@@ -96,10 +96,10 @@ const QueueItemTableMultiSelectAction = ({
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>
-              {t("annotation-queue.itemsTable.deleteQueueItems")}
+              {t("annotationQueue.itemsTable.deleteQueueItems")}
             </DialogTitle>
             <DialogDescription>
-              {t("annotation-queue.itemsTable.deleteConfirmation")}
+              {t("annotationQueue.itemsTable.deleteConfirmation")}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="sm:justify-start">
@@ -252,7 +252,7 @@ export function AnnotationQueueItemsTable({
       accessorKey: "source",
       header: t("common.table.source"),
       headerTooltip: {
-        description: t("annotation-queue.itemsTable.sourceDescription"),
+        description: t("annotationQueue.itemsTable.sourceDescription"),
       },
       id: "source",
       size: 50,
@@ -308,7 +308,7 @@ export function AnnotationQueueItemsTable({
     },
     {
       accessorKey: "completedAt",
-      header: t("annotation-queue.itemsTable.completedAt"),
+      header: t("annotationQueue.itemsTable.completedAt"),
       id: "completedAt",
       defaultHidden: true,
       enableHiding: true,
@@ -316,7 +316,7 @@ export function AnnotationQueueItemsTable({
     },
     {
       accessorKey: "annotatorUser",
-      header: t("annotation-queue.itemsTable.completedBy"),
+      header: t("annotationQueue.itemsTable.completedBy"),
       id: "annotatorUser",
       enableHiding: true,
       size: 80,
@@ -331,7 +331,7 @@ export function AnnotationQueueItemsTable({
             <Avatar className="h-7 w-7">
               <AvatarImage
                 src={image ?? undefined}
-                alt={userName ?? t("annotation-queue.itemsTable.userAvatar")}
+                alt={userName ?? t("annotationQueue.itemsTable.userAvatar")}
               />
               <AvatarFallback>
                 {userName
@@ -454,7 +454,7 @@ export function AnnotationQueueItemsTable({
                 }
         }
         help={{
-          description: t("annotation-queue.itemsTable.noItemsDescription"),
+          description: t("annotationQueue.itemsTable.noItemsDescription"),
           href: "https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge",
         }}
         pagination={{

@@ -147,14 +147,14 @@ export function ScoreConfigsTable({ projectId }: { projectId: string }) {
     {
       accessorKey: "id",
       id: "id",
-      header: "Config ID",
+      header: t("common.labels.configId"),
       enableHiding: true,
       defaultHidden: true,
     },
     {
       accessorKey: "createdAt",
       id: "createdAt",
-      header: "Created At",
+      header: t("common.table.createdAt"),
       enableHiding: true,
       defaultHidden: true,
     },

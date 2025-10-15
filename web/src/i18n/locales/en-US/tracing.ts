@@ -24,13 +24,19 @@ const translation = {
       copyId: "Copy ID",
     },
     io: {
-      input: "Input",
-      output: "Output",
       statusMessage: "Status message",
       additionalInput: "Additional input",
       placeholder: "Placeholder",
       unnamedPlaceholder: "Unnamed placeholder",
       hideHistory: "Hide history",
+    },
+    tableHeaders: {
+      observationLevels: "Observation Levels",
+      traceName: "Trace Name",
+      inputTokens: "Input Tokens",
+      outputTokens: "Output Tokens",
+      inputCost: "Input Cost",
+      outputCost: "Output Cost",
     },
     breakdown: {
       costBreakdown: "Cost breakdown",

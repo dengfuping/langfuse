@@ -122,7 +122,7 @@ export const ModelCostTable = ({
           description={t("dashboard.cards.modelCosts.description")}
         >
           <DocPopup
-            description="Calculated multiplying the number of tokens with cost per token for each model."
+            description={t("dashboard.modelUsageChart.costDescription")}
             href="https://langfuse.com/docs/model-usage-and-cost"
           />
         </TotalMetric>

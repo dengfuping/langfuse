@@ -103,6 +103,9 @@ const translation = {
     movingAverageOverTime: "Moving average over time",
     scoresOverTime: "Scores over time",
     selectScoreToViewAnalytics: "Select a score to view analytics",
+    scores: "Scores",
+    movingAveragePerScore: "Moving average per score",
+    scoresDescription: "Scores evaluate LLM quality and can be created manually or using the SDK.",
   },
   modelUsageChart: {
     title: "Model Usage",
@@ -112,6 +115,10 @@ const translation = {
     unitsByType: "Units by type",
     cost: "Cost",
     units: "Units",
+    allModels: "All models",
+    searchModels: "Search models...",
+    selectAll: "Select All",
+    costDescription: "Calculated multiplying the number of tokens with cost per token for each model.",
   },
   cards: {
     traces: {

@@ -158,7 +158,7 @@ export const EditDatasetItem = ({
                   name="input"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("dataset.form.input")}</FormLabel>
+                      <FormLabel>{t("common.labels.input")}</FormLabel>
                       <FormControl>
                         <CodeMirrorEditor
                           mode="json"

@@ -223,10 +223,10 @@ export const InnerEvalTemplateForm = (props: {
       variables: props.preFilledFormValues?.vars ?? [],
       outputReasoning: props.preFilledFormValues
         ? OutputSchema.parse(props.preFilledFormValues?.outputSchema).reasoning
-        : t("evaluation.eval.form.oneSentenceReasoning"),
+        : t("evaluation.eval.pages.oneSentenceReasoningForScore"),
       outputScore: props.preFilledFormValues
         ? OutputSchema.parse(props.preFilledFormValues?.outputSchema).score
-        : "Score between 0 and 1. Score 0 if false or negative and 1 if true or positive.",
+        : t("evaluation.eval.pages.scoreBetweenZeroAndOne"),
       shouldUseDefaultModel: isExistingUsingDefault,
     },
   });

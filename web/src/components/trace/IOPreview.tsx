@@ -176,7 +176,7 @@ export const IOPreview: React.FC<{
               <>
                 {!(hideIfNull && !input) && !hideInput ? (
                   <PrettyJsonView
-                    title={t("tracing.trace.io.input")}
+                    title={t("common.labels.input")}
                     className="ph-no-capture"
                     json={input ?? null}
                     isLoading={isLoading}
@@ -188,7 +188,7 @@ export const IOPreview: React.FC<{
                 ) : null}
                 {!(hideIfNull && !output) && !hideOutput ? (
                   <PrettyJsonView
-                    title={t("tracing.trace.io.output")}
+                    title={t("common.labels.output")}
                     className="ph-no-capture"
                     json={outputClean}
                     isLoading={isLoading}

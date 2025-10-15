@@ -30,15 +30,36 @@ const translation = {
   labels: {
     model: "模型",
     modelName: "模型名称",
+    provide: "提供",
+    provider: "提供商",
+    apiKey: "API 密钥",
   },
   settings: {
     noApiKey: "未配置 API 密钥",
+    addLlmConnection: "添加 LLM 连接",
+    title: "模型设置",
+    description: "为所选适配器配置模型参数。",
+  },
+  parameters: {
+    temperature: "温度",
+    outputTokenLimit: "输出 Token 限制",
+    topP: "Top P",
+    additionalOptions: "其他选项",
+  },
+  hints: {
+    additionalOptionsTooltip: "其他模型参数，如 top_k、frequency_penalty 等",
   },
   success: {
     modelUpdated: "模型已更新",
     modelCreated: "模型已创建",
     modelUpdatedDescription: "模型 '{{modelName}}' 已成功更新。新的生成将使用这些模型价格。",
     modelCreatedDescription: "模型 '{{modelName}}' 已成功创建。新的生成将使用这些模型价格。",
+  },
+  deleteConnection: {
+    title: "删除 LLM 连接",
+    description: "您确定要删除此连接吗？此操作无法撤销。",
+    permanentlyDelete: "永久删除",
+    cancel: "取消",
   },
 };
 

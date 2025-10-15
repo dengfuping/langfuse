@@ -198,7 +198,7 @@ export function DatasetItemsTable({
     },
     {
       accessorKey: "input",
-      header: t("dataset.itemsTable.input"),
+      header: t("common.labels.input"),
       id: "input",
       size: 200,
       enableHiding: true,

@@ -62,10 +62,11 @@ export default function EvaluatorsPage() {
     return (
       <Page
         headerProps={{
-          title: "LLM-as-a-Judge Evaluators",
+          title: t("evaluation.eval.pages.llmAsJudgeEvaluators"),
           help: {
-            description:
-              "Configure a langfuse managed or custom evaluator to evaluate incoming traces.",
+            description: t(
+              "evaluation.eval.pages.configureEvaluatorDescription",
+            ),
             href: "https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge",
           },
         }}
@@ -80,10 +81,11 @@ export default function EvaluatorsPage() {
     <>
       <Page
         headerProps={{
-          title: "LLM-as-a-Judge Evaluators",
+          title: t("evaluation.eval.pages.llmAsJudgeEvaluators"),
           help: {
-            description:
-              "Configure a langfuse managed or custom evaluator to evaluate incoming traces.",
+            description: t(
+              "evaluation.eval.pages.configureEvaluatorDescription",
+            ),
             href: "https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge",
           },
           tabsProps: {
@@ -104,7 +106,7 @@ export default function EvaluatorsPage() {
                 limitValue={countsQuery.data?.configActiveCount ?? 0}
                 limit={evaluatorLimit}
               >
-                Set up evaluator
+                {t("evaluation.eval.newEvaluator.title")}
               </ActionButton>
             </>
           ),

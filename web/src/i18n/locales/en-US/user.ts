@@ -6,7 +6,7 @@ const translation = {
   onboarding: {
     getStartedTitle: "Get Started with User Tracking",
     getStartedDescription: "Correlate costs, evaluations and other LLM Application metrics to specific users. Start tracking users to better understand how they interact with your LLM applications.",
-    gettingStarted: "To start tracking users, you need to add a 'userId' to your traces. See {documentation} for more details.",
+    gettingStarted: "To start tracking users, you need to add a 'userId' to your traces. See <documentation> for more details.",
   },
   features: {
     trackUserInteractions: {
@@ -49,6 +49,7 @@ const translation = {
     totalCost: "Total Cost",
     totalCostDescription: "Total cost for the user across all generations.",
     noEventYet: "No event yet",
+    environment: "Environment",
   },
 };
 

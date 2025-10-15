@@ -6,7 +6,7 @@ const translation = {
   onboarding: {
     getStartedTitle: "开始使用会话",
     getStartedDescription: "会话允许您将相关跟踪分组，例如对话或线程。使用会话来跟踪随时间的交互并分析对话/线程流程。",
-    gettingStarted: "要开始使用会话，您需要向跟踪添加 `sessionId`。查看{documentation}了解更多详细信息。",
+    gettingStarted: "要开始使用会话，您需要向跟踪添加 `sessionId`。查看<documentation>了解更多详细信息。",
   },
   features: {
     groupRelatedTraces: {
@@ -23,7 +23,7 @@ const translation = {
     },
     sessionLevelMetrics: {
       title: "会话级指标",
-      description: "获取整个会话的聚合指标，包括成本和令牌使用情况",
+      description: "获取整个会话的聚合指标，包括成本和 token 使用情况",
     },
   },
 };

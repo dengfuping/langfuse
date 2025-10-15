@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/src/components/ui/button";
 import {
   FormControl,
@@ -108,6 +109,7 @@ export const PromptExperimentsForm = ({
   setShowPromptForm: (open: boolean) => void;
   showSDKRunInfoPage?: boolean;
 }) => {
+  const { t } = useTranslation();
   const capture = usePostHogClientCapture();
   const [open, setOpen] = useState(false);
   const [selectedPromptName, setSelectedPromptName] = useState<string>(
@@ -270,20 +272,20 @@ export const PromptExperimentsForm = ({
             onClick={() => setShowPromptForm(false)}
             className="inline-block self-start"
           >
-            ← Back
+            {t("dataset.newDatasetRunForm.back")}
           </Button>
         )}
-        <DialogTitle>New Dataset Run</DialogTitle>
+        <DialogTitle>{t("dataset.newDatasetRunForm.title")}</DialogTitle>
         <DialogDescription>
-          Start a dataset run to test a prompt version on a dataset. See{" "}
+          {t("dataset.newDatasetRunForm.description")}{" "}
           <Link
             href="https://langfuse.com/docs/evaluation/dataset-runs/native-run"
             target="_blank"
             className="underline"
           >
-            documentation
+            {t("dataset.newDatasetRunForm.learnMore")}
           </Link>{" "}
-          to learn more.
+          {t("dataset.newDatasetRunForm.learnMoreLink")}.
         </DialogDescription>
       </DialogHeader>
       <Form {...form}>
@@ -294,7 +296,9 @@ export const PromptExperimentsForm = ({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Dataset run name (optional)</FormLabel>
+                  <FormLabel>
+                    {t("dataset.newDatasetRunForm.datasetRunName")}
+                  </FormLabel>
                   <FormControl>
                     <Input {...field} type="string" />
                   </FormControl>
@@ -307,11 +311,15 @@ export const PromptExperimentsForm = ({
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Description (optional)</FormLabel>
+                  <FormLabel>
+                    {t("dataset.newDatasetRunForm.descriptionLabel")}
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       {...field}
-                      placeholder="Add description..."
+                      placeholder={t(
+                        "dataset.newDatasetRunForm.descriptionPlaceholder",
+                      )}
                       className="focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 active:ring-0"
                     />
                   </FormControl>
@@ -324,7 +332,7 @@ export const PromptExperimentsForm = ({
               name="promptId"
               render={() => (
                 <FormItem>
-                  <FormLabel>Prompt</FormLabel>
+                  <FormLabel>{t("dataset.newDatasetRunForm.prompt")}</FormLabel>
                   <div className="mb-2 flex gap-2">
                     <Popover open={open} onOpenChange={setOpen}>
                       <PopoverTrigger asChild>
@@ -334,7 +342,8 @@ export const PromptExperimentsForm = ({
                           aria-expanded={open}
                           className="w-2/3 justify-between px-2 font-normal"
                         >
-                          {selectedPromptName || "Select a prompt"}
+                          {selectedPromptName ||
+                            t("dataset.newDatasetRunForm.selectPrompt")}
                           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                         </Button>
                       </PopoverTrigger>
@@ -344,12 +353,14 @@ export const PromptExperimentsForm = ({
                       >
                         <InputCommand>
                           <InputCommandInput
-                            placeholder="Search prompts..."
+                            placeholder={t(
+                              "dataset.newDatasetRunForm.searchPrompts",
+                            )}
                             className="h-9"
                           />
                           <InputCommandList>
                             <InputCommandEmpty>
-                              No prompt found.
+                              {t("dataset.newDatasetRunForm.noPromptFound")}
                             </InputCommandEmpty>
                             <InputCommandGroup>
                               {promptsByName &&
@@ -397,8 +408,8 @@ export const PromptExperimentsForm = ({
                           className="w-1/3 justify-between px-2 font-normal"
                         >
                           {selectedPromptVersion
-                            ? `Version ${selectedPromptVersion}`
-                            : "Version"}
+                            ? `${t("dataset.newDatasetRunForm.version")} ${selectedPromptVersion}`
+                            : t("dataset.newDatasetRunForm.version")}
                           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                         </Button>
                       </PopoverTrigger>
@@ -409,7 +420,7 @@ export const PromptExperimentsForm = ({
                         <InputCommand>
                           <InputCommandList>
                             <InputCommandEmpty>
-                              No version found.
+                              {t("dataset.newDatasetRunForm.noVersionFound")}
                             </InputCommandEmpty>
                             <InputCommandGroup className="overflow-y-auto">
                               {promptsByName &&
@@ -442,7 +453,9 @@ export const PromptExperimentsForm = ({
                                 )
                               ) : (
                                 <InputCommandItem disabled>
-                                  No versions available
+                                  {t(
+                                    "dataset.newDatasetRunForm.noVersionsAvailable",
+                                  )}
                                 </InputCommandItem>
                               )}
                             </InputCommandGroup>
@@ -494,25 +507,29 @@ export const PromptExperimentsForm = ({
               render={({ field }) => (
                 <FormItem>
                   <div className="flex items-center gap-2">
-                    <FormLabel>Dataset</FormLabel>
+                    <FormLabel>
+                      {t("dataset.newDatasetRunForm.dataset")}
+                    </FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <span className="cursor-pointer text-xs text-muted-foreground">
-                          (expected columns)
+                          {t("dataset.newDatasetRunForm.expectedColumns")}
                         </span>
                       </PopoverTrigger>
                       <PopoverContent className="w-80">
                         <div className="flex flex-col space-y-2">
                           <h4 className="text-sm font-medium leading-none">
-                            Expected columns
+                            {t(
+                              "dataset.newDatasetRunForm.expectedColumnsTitle",
+                            )}
                           </h4>
                           <span className="text-sm text-muted-foreground">
                             {promptId ? (
                               <div>
                                 <span>
-                                  Given current prompt, dataset item input must
-                                  contain at least one of these first-level JSON
-                                  keys:
+                                  {t(
+                                    "dataset.newDatasetRunForm.expectedColumnsDescription",
+                                  )}
                                 </span>
                                 <ul className="my-2 ml-2 list-inside list-disc">
                                   {expectedColumns.map((col) => (
@@ -520,14 +537,13 @@ export const PromptExperimentsForm = ({
                                   ))}
                                 </ul>
                                 <span>
-                                  Variables (like {"{{variable}}"}) should be
-                                  mapped to string values. Placeholders should
-                                  be mapped to arrays of message objects. These
-                                  will be used as the input to your prompt.
+                                  {t(
+                                    "dataset.newDatasetRunForm.variablesDescription",
+                                  )}
                                 </span>
                               </div>
                             ) : (
-                              "Please select a prompt first"
+                              t("dataset.newDatasetRunForm.selectPromptFirst")
                             )}
                           </span>
                         </div>
@@ -558,9 +574,11 @@ export const PromptExperimentsForm = ({
 
             {evaluators.data && !!datasetId ? (
               <FormItem>
-                <FormLabel>Evaluators</FormLabel>
+                <FormLabel>
+                  {t("dataset.newDatasetRunForm.evaluators")}
+                </FormLabel>
                 <FormDescription>
-                  Will run against the LLM outputs
+                  {t("dataset.newDatasetRunForm.willRunAgainstLLMOutputs")}
                 </FormDescription>
                 <TemplateSelector
                   projectId={projectId}
@@ -574,15 +592,16 @@ export const PromptExperimentsForm = ({
               </FormItem>
             ) : (
               <FormItem>
-                <FormLabel>Evaluators</FormLabel>
+                <FormLabel>
+                  {t("dataset.newDatasetRunForm.evaluator")}
+                </FormLabel>
                 {hasEvalReadAccess ? (
                   <FormDescription>
-                    Select a dataset first to set up evaluators.
+                    {t("dataset.newDatasetRunForm.selectDatasetFirst")}
                   </FormDescription>
                 ) : (
                   <FormDescription>
-                    ⓘ You do not have access to view evaluators. Please contact
-                    your admin to upgrade your role.
+                    ⓘ {t("dataset.newDatasetRunForm.noAccessToEvaluators")}
                   </FormDescription>
                 )}
               </FormItem>
@@ -593,12 +612,13 @@ export const PromptExperimentsForm = ({
                 <Card className="relative overflow-hidden rounded-md shadow-none group-data-[collapsible=icon]:hidden">
                   <CardHeader className="p-2">
                     <CardTitle className="flex items-center justify-between text-sm">
-                      <span>Validating configuration...</span>
+                      <span>
+                        {t("dataset.newDatasetRunForm.validatingConfiguration")}
+                      </span>
                       <Loader2 className="h-3 w-3 animate-spin" />
                     </CardTitle>
                     <CardDescription className="text-foreground">
-                      Checking dataset items against prompt variables and
-                      placeholders
+                      {t("dataset.newDatasetRunForm.checkingDatasetItems")}
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -658,7 +678,7 @@ export const PromptExperimentsForm = ({
                 }
                 loading={form.formState.isSubmitting}
               >
-                Start
+                {t("dataset.newDatasetRunForm.start")}
               </Button>
             </div>
           </DialogFooter>
@@ -677,8 +697,9 @@ export const PromptExperimentsForm = ({
         >
           <DialogContent className="max-h-[90vh] max-w-screen-md overflow-y-auto">
             <DialogTitle>
-              {selectedEvaluatorData.evaluator.id ? "Edit" : "Configure"}{" "}
-              Evaluator
+              {selectedEvaluatorData.evaluator.id
+                ? t("dataset.newDatasetRunForm.editEvaluator")
+                : t("dataset.newDatasetRunForm.configureEvaluator")}
             </DialogTitle>
             <EvaluatorForm
               projectId={projectId}

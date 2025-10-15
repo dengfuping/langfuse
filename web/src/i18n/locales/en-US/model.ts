@@ -32,15 +32,36 @@ const translation = {
   labels: {
     model: "Model",
     modelName: "Model Name",
+    provide: "Provide",
+    provider: "Provider",
+    apiKey: "API key",
   },
   settings: {
     noApiKey: "No API key configured",
+    addLlmConnection: "Add LLM Connection",
+    title: "Model Settings",
+    description: "Configure model parameters for the selected adapter.",
+  },
+  parameters: {
+    temperature: "Temperature",
+    outputTokenLimit: "Output Token Limit",
+    topP: "Top P",
+    additionalOptions: "Additional Options",
+  },
+  hints: {
+    additionalOptionsTooltip: "Additional model parameters like top_k, frequency_penalty, etc.",
   },
   success: {
     modelUpdated: "Model updated",
     modelCreated: "Model created",
     modelUpdatedDescription: "The model '{{modelName}}' has been successfully updated. New generations will use these model prices.",
     modelCreatedDescription: "The model '{{modelName}}' has been successfully created. New generations will use these model prices.",
+  },
+  deleteConnection: {
+    title: "Delete LLM Connection",
+    description: "Are you sure you want to delete this connection? This action cannot be undone.",
+    permanentlyDelete: "Permanently delete",
+    cancel: "Cancel",
   },
 };
 

@@ -76,7 +76,7 @@ export const AnnotationQueuesItem = ({
         itemType: "QUEUE_ITEM",
         breadcrumb: [
           {
-            name: t("annotation-queue.item.annotationQueues"),
+            name: t("annotationQueue.item.annotationQueues"),
             href: `/project/${projectId}/annotation-queues`,
           },
           {
@@ -97,7 +97,7 @@ export const AnnotationQueuesItem = ({
               <TabsList>
                 <TabsTrigger value="hideTree">
                   <Goal className="mr-1 h-4 w-4"></Goal>
-                  {t("annotation-queue.item.focused")}
+                  {t("annotationQueue.item.focused")}
                 </TabsTrigger>
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -112,13 +112,13 @@ export const AnnotationQueuesItem = ({
                         }
                       >
                         <Network className="mr-1 h-4 w-4"></Network>
-                        {t("annotation-queue.item.detailed")}
+                        {t("annotationQueue.item.detailed")}
                       </TabsTrigger>
                     </span>
                   </TooltipTrigger>
                   {isDetailedViewDisabled && (
                     <TooltipContent>
-                      <p>{t("annotation-queue.item.detailedViewTooltip")}</p>
+                      <p>{t("annotationQueue.item.detailedViewTooltip")}</p>
                     </TooltipContent>
                   )}
                 </Tooltip>

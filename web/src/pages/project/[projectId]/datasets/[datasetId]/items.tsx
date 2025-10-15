@@ -50,7 +50,7 @@ export default function DatasetItems() {
           },
         ],
         tabsProps: {
-          tabs: getDatasetTabs(projectId, datasetId),
+          tabs: getDatasetTabs(projectId, datasetId, t),
           activeTab: DATASET_TABS.ITEMS,
         },
         actionButtonsRight: (

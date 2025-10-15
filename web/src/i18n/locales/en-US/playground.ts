@@ -3,6 +3,8 @@ const translation = {
     title: "Tools",
     description: "Configure tools for your model to use.",
     noToolsAttached: "No tools attached.",
+    searchTools: "Search tools...",
+    noToolsFound: "No tools found.",
   },
   structuredOutput: {
     title: "Structured Output",
@@ -56,6 +58,19 @@ const translation = {
     executingWindowsPlural: "Executing {{count}} windows",
     executeAll: "Execute all playground windows simultaneously",
     runAll: "Run All (Ctrl + Enter)",
+    output: "Output",
+    submit: "Submit",
+    searchSchemas: "Search schemas...",
+    noSchemasFound: "No schemas found.",
+    createNewSchema: "Create new schema",
+  },
+  prompts: {
+    searchChatPrompts: "Search chat prompts...",
+    saveAsNewPrompt: "Save as new prompt",
+    or: "or",
+    noChatPromptFound: "No chat prompt found",
+    saveAsNewPromptVersion: "Save as new prompt version",
+    playgroundPromptsDescription: "Prompts from the playground can only be saved to 'chat' prompts as they include multiple system/user messages.",
   },
 };
 

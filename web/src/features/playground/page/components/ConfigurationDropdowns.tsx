@@ -149,7 +149,7 @@ export const ConfigurationDropdowns: React.FC = () => {
           <PopoverTrigger asChild>
             <Button variant="outline" size="sm" className="h-8 gap-2">
               {getResponsiveContent(
-                t("playground.variables"),
+                t("playground.variables.title"),
                 Variable,
                 t("playground.vars"),
               )}
@@ -180,7 +180,7 @@ export const ConfigurationDropdowns: React.FC = () => {
                 <div className="space-y-4">
                   <div>
                     <h5 className="mb-2 text-xs font-medium">
-                      {t("playground.variables")}
+                      {t("playground.variables.variables")}
                     </h5>
                     <Variables />
                   </div>

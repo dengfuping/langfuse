@@ -5,7 +5,7 @@ import {
 } from "@/src/components/ui/splash-screen";
 import { Users, LineChart, Filter, BarChart4 } from "lucide-react";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 export function UsersOnboarding() {
   const { t } = useTranslation();
@@ -38,18 +38,17 @@ export function UsersOnboarding() {
       description={t("user.onboarding.getStartedDescription")}
       valuePropositions={valuePropositions}
       gettingStarted={
-        <span>
-          {t("user.onboarding.gettingStarted", {
+        <Trans
+          i18nKey="user.onboarding.gettingStarted"
+          components={{
             documentation: (
               <Link
                 href="https://langfuse.com/docs/observability/features/users"
                 className="underline"
-              >
-                {t("common.documentation")}
-              </Link>
+              />
             ),
-          })}
-        </span>
+          }}
+        />
       }
       videoSrc="https://static.langfuse.com/prod-assets/onboarding/users-overview-v1.mp4"
     />

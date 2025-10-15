@@ -163,6 +163,7 @@ export function LlmApiKeyList(props: { projectId: string }) {
 
 // show dialog to let user confirm that this is a destructive action
 function DeleteApiKeyButton(props: { projectId: string; apiKeyId: string }) {
+  const { t } = useTranslation();
   const capture = usePostHogClientCapture();
   const hasAccess = useHasProjectAccess({
     projectId: props.projectId,
@@ -186,10 +187,11 @@ function DeleteApiKeyButton(props: { projectId: string; apiKeyId: string }) {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className="mb-5">Delete LLM Connection</DialogTitle>
+          <DialogTitle className="mb-5">
+            {t("model.deleteConnection.title")}
+          </DialogTitle>
           <DialogDescription>
-            Are you sure you want to delete this connection? This action cannot
-            be undone.
+            {t("model.deleteConnection.description")}
           </DialogDescription>
         </DialogHeader>
 
@@ -212,10 +214,10 @@ function DeleteApiKeyButton(props: { projectId: string; apiKeyId: string }) {
             }}
             loading={mutDeleteApiKey.isPending}
           >
-            Permanently delete
+            {t("model.deleteConnection.permanentlyDelete")}
           </Button>
           <Button variant="ghost" onClick={() => setOpen(false)}>
-            Cancel
+            {t("model.deleteConnection.cancel")}
           </Button>
         </DialogFooter>
       </DialogContent>

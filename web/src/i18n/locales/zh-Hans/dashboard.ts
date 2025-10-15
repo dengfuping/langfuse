@@ -103,6 +103,9 @@ const translation = {
     movingAverageOverTime: "随时间移动平均",
     scoresOverTime: "随时间评分",
     selectScoreToViewAnalytics: "选择评分以查看分析",
+    scores: "评分",
+    movingAveragePerScore: "每个评分的移动平均",
+    scoresDescription: "评分评估 LLM 质量，可以手动创建或使用 SDK 创建。",
   },
   modelUsageChart: {
     title: "模型使用情况",
@@ -112,6 +115,10 @@ const translation = {
     unitsByType: "按类型单位",
     cost: "成本",
     units: "单位",
+    allModels: "所有模型",
+    searchModels: "搜索模型...",
+    selectAll: "全选",
+    costDescription: "通过将每个模型的 token 数量与每 token 成本相乘来计算。",
   },
   cards: {
     traces: {
@@ -122,7 +129,7 @@ const translation = {
       title: "模型成本",
       description: "总成本",
       model: "模型",
-      tokens: "令牌",
+      tokens: "token",
       usd: "美元",
     },
     scores: {
@@ -141,7 +148,7 @@ const translation = {
     allModels: "所有模型",
     userConsumption: {
       title: "用户消费",
-      tokenCost: "令牌成本",
+      tokenCost: "token 消耗",
       countOfTraces: "跟踪数量",
       totalCost: "总成本",
       totalTraces: "总跟踪数",

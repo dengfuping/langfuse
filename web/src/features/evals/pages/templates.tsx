@@ -35,9 +35,9 @@ export default function TemplatesPage() {
   return (
     <Page
       headerProps={{
-        title: "LLM-as-a-Judge Evaluators",
+        title: t("evaluation.eval.pages.llmAsJudgeEvaluators"),
         help: {
-          description: "View all langfuse managed and custom evaluators.",
+          description: t("evaluation.eval.pages.viewAllEvaluatorsDescription"),
           href: "https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge",
         },
         tabsProps: {
@@ -65,7 +65,7 @@ export default function TemplatesPage() {
                 ) : (
                   <Lock className="mr-2 h-4 w-4" />
                 )}
-                Custom Evaluator
+                {t("evaluation.eval.pages.newTemplate")}
               </Link>
             </Button>
           </>

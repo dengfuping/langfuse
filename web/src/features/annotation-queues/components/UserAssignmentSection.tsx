@@ -45,10 +45,8 @@ export const UserAssignmentSection = ({
         utils.annotationQueueAssignments.invalidate();
         utils.annotationQueues.invalidate();
         showSuccessToast({
-          title: t("annotation-queue.userAssignment.removedAssignment"),
-          description: t(
-            "annotation-queue.userAssignment.userRemovedFromQueue",
-          ),
+          title: t("annotationQueue.userAssignment.removedAssignment"),
+          description: t("annotationQueue.userAssignment.userRemovedFromQueue"),
         });
       },
     });
@@ -101,7 +99,7 @@ export const UserAssignmentSection = ({
         searchResults={userSearch.searchResults}
         isLoading={userSearch.isLoading}
         disabled={!hasQueueAssignmentWriteAccess}
-        placeholder={t("annotation-queue.userAssignment.searchUsersToAdd")}
+        placeholder={t("annotationQueue.userAssignment.searchUsersToAdd")}
         hasMoreResults={userSearch.hasMoreResults}
         getItemKey={(user) => user.id}
         renderSelectedItem={(user, onRemove) => (
@@ -125,8 +123,7 @@ export const UserAssignmentSection = ({
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-3">
                 <p className="truncate text-xs font-medium">
-                  {user.name ||
-                    t("annotation-queue.userAssignment.unnamedUser")}
+                  {user.name || t("annotationQueue.userAssignment.unnamedUser")}
                 </p>
                 <p className="truncate text-xs text-muted-foreground">
                   {user.email}
@@ -145,7 +142,7 @@ export const UserAssignmentSection = ({
         queueAssignmentsQuery.data?.totalCount > 0 && (
           <div className="space-y-2">
             <h4 className="text-sm text-muted-foreground">
-              {t("annotation-queue.userAssignment.assignedTo")} (
+              {t("annotationQueue.userAssignment.assignedTo")} (
               {queueAssignmentsQuery.data?.totalCount})
             </h4>
             <div className="max-h-32 overflow-y-auto rounded-md border bg-background">
@@ -157,7 +154,7 @@ export const UserAssignmentSection = ({
                         <div className="flex items-center gap-3">
                           <p className="truncate text-xs font-medium">
                             {user.name ||
-                              t("annotation-queue.userAssignment.unnamedUser")}
+                              t("annotationQueue.userAssignment.unnamedUser")}
                           </p>
                           <p className="truncate text-xs text-muted-foreground">
                             {user.email}
@@ -191,7 +188,7 @@ export const UserAssignmentSection = ({
                     <p className="text-xs italic">
                       {queueAssignmentsQuery.data.totalCount -
                         queueAssignmentsQuery.data.assignments.length}{" "}
-                      {t("annotation-queue.userAssignment.moreAssignedUsers")}
+                      {t("annotationQueue.userAssignment.moreAssignedUsers")}
                     </p>
                   </div>
                 </div>

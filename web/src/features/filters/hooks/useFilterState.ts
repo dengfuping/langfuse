@@ -8,7 +8,7 @@ import {
   promptsTableCols,
   datasetItemFilterColumns,
 } from "@langfuse/shared";
-import { scoresTableCols } from "@/src/server/api/definitions/scoresTable";
+import { getScoresTableCols } from "@/src/components/table/definitions/scoresTableI18n";
 import {
   useQueryParam,
   encodeDelimitedArray,
@@ -139,7 +139,7 @@ const getTableCols = (t: (key: string) => string) => ({
   generations: observationsTableCols,
   traces: tracesTableCols,
   sessions: sessionsViewCols,
-  scores: scoresTableCols,
+  scores: getScoresTableCols(t),
   prompts: promptsTableCols,
   users: usersTableCols,
   eval_configs: evalConfigFilterColumns,
