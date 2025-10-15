@@ -23,41 +23,30 @@ const requireSilent = async (lang: string, namespace: string) => {
 };
 
 const getNamespaces = (): string[] => {
-  // Check if we're in a browser environment
-  if (typeof window === "undefined") {
-    // Server-side: return a static list of known namespaces
-    return [
-      "annotation-queue",
-      "auth",
-      "automation",
-      "common",
-      "dashboard",
-      "dataset",
-      "ee",
-      "evaluation",
-      "model",
-      "onboarding",
-      "organization",
-      "playground",
-      "project",
-      "prompt",
-      "rbac",
-      "session",
-      "tracing",
-      "ui",
-      "user",
-      "widget",
-    ];
-  }
-
-  const context = (require as any).context(
-    `./locales/${DEFAULT_LANGUAGE}`,
-    false,
-    /\.ts$/,
-  );
-  return context
-    .keys()
-    .map((key: string) => key.replace("./", "").replace(".ts", ""));
+  // Return a static list of known namespaces for both server and client
+  // This avoids the require.context issue in Next.js client-side code
+  return [
+    "annotation-queue",
+    "auth",
+    "automation",
+    "common",
+    "dashboard",
+    "dataset",
+    "ee",
+    "evaluation",
+    "model",
+    "onboarding",
+    "organization",
+    "playground",
+    "project",
+    "prompt",
+    "rbac",
+    "session",
+    "tracing",
+    "ui",
+    "user",
+    "widget",
+  ];
 };
 
 const NAMESPACES = getNamespaces();
