@@ -245,8 +245,8 @@ const translation = {
   confirmations: {
     pleaseConfirm: "Please confirm",
     actionCannotBeUndone: "This action cannot be undone and removes all the data associated with this",
-    typeToConfirm: 'Type "{confirmation}" to confirm',
-    toConfirmType: 'To confirm, type "{confirmation}" in the input box',
+    typeToConfirm: 'Type "{{confirmation}}" to confirm',
+    toConfirmType: 'To confirm, type "{{confirmation}}" in the input box',
     scoreConfigsCannotBeEdited: "Score configs cannot be edited or deleted after they have been created. Are you sure you want to proceed?",
     areYouSureRunBlobStorage: "Are you sure you want to run the blob storage export now? This will export all data since the last sync.",
     areYouSureResetBlobStorage: "Are you sure you want to reset the Blob Storage integration for this project?",

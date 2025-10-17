@@ -116,7 +116,7 @@ const translation = {
       defaultModelConfiguration: "Default model configuration",
       selectModelWithFunctionCalling: "Select a model which supports function calling.",
       updatingDefaultModelWillImpact: "Updating the default model will impact any currently running evaluators that use it. Please confirm that you want to proceed with this change.",
-      typeToConfirm: 'Type "{confirmation}" to confirm',
+      typeToConfirm: 'Type "{{confirmation}}" to confirm',
       runningEvaluator: "Running evaluator",
       editMode: "Edit Mode",
       configuration: "Configuration",

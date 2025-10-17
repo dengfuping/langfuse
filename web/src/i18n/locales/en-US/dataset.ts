@@ -9,7 +9,7 @@ const translation = {
     noDatasetsFound: "No datasets found.",
     current: "(current)",
     descriptionOptional: "Description (optional)",
-    typeToConfirmDeletion: 'Type "{datasetName}" to confirm deletion',
+    typeToConfirmDeletion: 'Type "{{datasetName}}" to confirm deletion',
   },
   actions: {
     newDataset: "New dataset",

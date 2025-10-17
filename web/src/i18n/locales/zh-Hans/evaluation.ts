@@ -116,7 +116,7 @@ const translation = {
       defaultModelConfiguration: "默认模型配置",
       selectModelWithFunctionCalling: "选择支持函数调用的模型。",
       updatingDefaultModelWillImpact: "更新默认模型将影响任何当前使用它的运行中的评估器。请确认您要继续进行此更改。",
-      typeToConfirm: '输入 "{confirmation}" 以确认',
+      typeToConfirm: '输入 "{{confirmation}}" 以确认',
       runningEvaluator: "运行中的评估器",
       editMode: "编辑模式",
       configuration: "配置",

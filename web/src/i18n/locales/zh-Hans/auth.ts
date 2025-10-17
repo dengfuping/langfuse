@@ -62,7 +62,7 @@ const translation = {
     and: "和",
   },
   dividers: {
-    orSignInWith: "或{action}使用",
+    orSignInWith: "或{{action}}使用",
   },
   prompts: {
     enterOrganizationId: "请输入您的组织 ID",

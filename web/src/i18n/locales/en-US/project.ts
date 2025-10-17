@@ -17,8 +17,8 @@ const translation = {
       publicKey: "Public Key",
       secretKey: "Secret Key",
       createNewApiKeys: "Create new API keys",
-      noPermission: "You do not have permission to view API keys for this {scope}.",
-      secretKeyDescription: "This key can only be viewed once. You can always create new keys in the {scope} settings.",
+      noPermission: "You do not have permission to view API keys for this {{scope}}.",
+      secretKeyDescription: "This key can only be viewed once. You can always create new keys in the {{scope}} settings.",
       host: "Host",
       usage: "Usage",
       other: "Other",
@@ -241,8 +241,8 @@ const translation = {
   delete: {
     deleteProject: "Delete Project",
     deleteProjectButton: "Delete project",
-    pleaseConfirmWith: 'Please confirm with "{confirmation}"',
-    toConfirmType: 'To confirm, type "{confirmation}" in the input box',
+    pleaseConfirmWith: 'Please confirm with "{{confirmation}}"',
+    toConfirmType: 'To confirm, type "{{confirmation}}" in the input box',
   },
   dashboard: {
     createDashboard: "Create Dashboard",

@@ -63,7 +63,7 @@ const translation = {
     and: "and",
   },
   dividers: {
-    orSignInWith: "or {action} with",
+    orSignInWith: "or {{action}} with",
   },
   prompts: {
     enterOrganizationId: "Please enter your organization ID",

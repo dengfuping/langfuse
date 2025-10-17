@@ -245,8 +245,8 @@ const translation = {
   confirmations: {
     pleaseConfirm: "请确认",
     actionCannotBeUndone: "此操作无法撤销，将删除与此相关的所有数据",
-    typeToConfirm: '输入 "{confirmation}" 以确认',
-    toConfirmType: '要确认，请在输入框中输入 "{confirmation}"',
+    typeToConfirm: '输入 "{{confirmation}}" 以确认',
+    toConfirmType: '要确认，请在输入框中输入 "{{confirmation}}"',
     scoreConfigsCannotBeEdited: "评分配置创建后无法编辑或删除。您确定要继续吗？",
     areYouSureRunBlobStorage: "您确定现在运行 Blob 存储导出吗？这将导出自上次同步以来的所有数据。",
     areYouSureResetBlobStorage: "您确定要重置此项目的 Blob 存储集成吗？",

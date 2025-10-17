@@ -17,8 +17,8 @@ const translation = {
       publicKey: "公钥",
       secretKey: "私钥",
       createNewApiKeys: "创建新的 API 密钥",
-      noPermission: "您没有权限查看此 {scope} 的 API 密钥。",
-      secretKeyDescription: "此密钥只能查看一次。您始终可以在 {scope} 设置中创建新密钥。",
+      noPermission: "您没有权限查看此 {{scope}} 的 API 密钥。",
+      secretKeyDescription: "此密钥只能查看一次。您始终可以在 {{scope}} 设置中创建新密钥。",
       host: "主机",
       usage: "用法",
       other: "其他",
@@ -240,8 +240,8 @@ const translation = {
   delete: {
     deleteProject: "删除项目",
     deleteProjectButton: "删除项目",
-    pleaseConfirmWith: '请使用 "{confirmation}" 确认',
-    toConfirmType: '要确认，请在输入框中输入 "{confirmation}"',
+    pleaseConfirmWith: '请使用 "{{confirmation}}" 确认',
+    toConfirmType: '要确认，请在输入框中输入 "{{confirmation}}"',
   },
   dashboard: {
     createDashboard: "创建仪表板",

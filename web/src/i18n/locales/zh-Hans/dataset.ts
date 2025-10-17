@@ -9,7 +9,7 @@ const translation = {
     noDatasetsFound: "未找到数据集。",
     current: "（当前）",
     descriptionOptional: "描述（可选）",
-    typeToConfirmDeletion: '输入 "{datasetName}" 以确认删除',
+    typeToConfirmDeletion: '输入 "{{datasetName}}" 以确认删除',
   },
   actions: {
     newDataset: "新建数据集",
@@ -164,7 +164,7 @@ const translation = {
     aggregatedRunItemsScores: "聚合运行数据项评分",
     actionsSelected: "操作（已选择 {{count}} 项）",
     compare: "比较",
-    deleteConfirmation: "此操作无法撤销，将删除与 {{count}} 个数据集运行{{countPlural}} 相关的所有数据。",
+    deleteConfirmation: "此操作无法撤销，将删除与 {{count}} 个数据集运行相关的所有数据。",
     deleteDatasetRuns: "删除数据集运行",
   },
   aggregateCell: {
