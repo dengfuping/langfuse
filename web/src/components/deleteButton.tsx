@@ -123,7 +123,9 @@ export function DeleteButton({
         </h2>
         <p className="mb-3 max-w-72 text-sm">
           {customDeletePrompt ??
-            `${t("common.confirmations.actionCannotBeUndone")} ${entityToDeleteName}.`}
+            t("common.confirmations.actionCannotBeUndone", {
+              entityName: entityToDeleteName,
+            })}
         </p>
         {deleteConfirmation && (
           <div className="mb-4 grid w-full gap-1.5">
@@ -155,7 +157,9 @@ export function DeleteButton({
               void executeDeleteMutation(onDeleteSuccess);
             }}
           >
-            {t("common.actions.delete")} {entityToDeleteName}
+            {t("common.actions.deleteEntity", {
+              entityName: entityToDeleteName,
+            })}
           </Button>
         </div>
       </PopoverContent>
@@ -204,7 +208,7 @@ export function DeleteTraceButton(props: DeleteButtonProps) {
           source: isTableAction ? "table-single-row" : "trace",
         })
       }
-      entityToDeleteName="trace"
+      entityToDeleteName={t("common.entities.trace")}
       executeDeleteMutation={executeDeleteMutation}
       isDeleteMutationLoading={traceMutation.isPending}
       enabled={hasTraceDeletionEntitlement}
@@ -213,6 +217,7 @@ export function DeleteTraceButton(props: DeleteButtonProps) {
 }
 
 export function DeleteDatasetButton(props: DeleteButtonProps) {
+  const { t } = useTranslation();
   const utils = api.useUtils();
   const {
     itemId,
@@ -247,7 +252,7 @@ export function DeleteDatasetButton(props: DeleteButtonProps) {
           source: isTableAction ? "table-single-row" : "dataset",
         })
       }
-      entityToDeleteName="dataset"
+      entityToDeleteName={t("common.entities.dataset")}
       executeDeleteMutation={executeDeleteMutation}
       isDeleteMutationLoading={datasetMutation.isPending}
     />
@@ -291,7 +296,7 @@ export function DeleteDashboardButton(props: DeleteButtonProps) {
       captureDeleteSuccess={(capture) =>
         capture("dashboard:delete_dashboard_button_click")
       }
-      entityToDeleteName="dashboard"
+      entityToDeleteName={t("common.entities.dashboard")}
       executeDeleteMutation={executeDeleteMutation}
       isDeleteMutationLoading={dashboardMutation.isPending}
     />
@@ -350,7 +355,7 @@ export function DeleteEvalConfigButton(props: DeleteButtonProps) {
       customDeletePrompt={t(
         "evaluation.eval.confirmations.runningEvaluatorDeletePrompt",
       )}
-      entityToDeleteName="running evaluator"
+      entityToDeleteName={t("common.entities.runningEvaluator")}
       executeDeleteMutation={executeDeleteMutation}
       isDeleteMutationLoading={evaluatorMutation.isPending}
     />
@@ -408,7 +413,7 @@ export function DeleteEvaluationModelButton(
           source: isTableAction ? "table-single-row" : "evaluator",
         })
       }
-      entityToDeleteName="default evaluation model"
+      entityToDeleteName={t("common.entities.defaultEvaluationModel")}
       customDeletePrompt={t(
         "evaluation.eval.confirmations.defaultModelDeletePrompt",
       )}
@@ -456,7 +461,7 @@ export function DeleteEvaluationModelButton(
 //           source: isTableAction ? "table-single-row" : "template",
 //         })
 //       }
-//       entityToDeleteName="template"
+//       entityToDeleteName={t("common.entities.template")}
 //       executeDeleteMutation={executeDeleteMutation}
 //       isDeleteMutationLoading={templateMutation.isLoading}
 //       enabled={hasModelBasedEvaluationEntitlement}
