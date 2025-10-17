@@ -327,8 +327,6 @@ const translation = {
       addNewScoreConfigTitle: "添加新评分配置",
       addCategory: "添加类别",
       removeCategory: "删除类别",
-      true: "真",
-      false: "假",
       description: "描述",
       descriptionOptional: "描述（可选）",
       provideOptionalDescription: "提供评分配置的可选描述...",

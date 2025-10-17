@@ -245,14 +245,9 @@ export function CreateScoreConfigButton({ projectId }: { projectId: string }) {
                             form.setValue("maxValue", undefined);
                             if (isBooleanDataType(value as ScoreDataType)) {
                               replace([
-                                {
-                                  label: t("evaluation.score.form.true"),
-                                  value: 1,
-                                },
-                                {
-                                  label: t("evaluation.score.form.false"),
-                                  value: 0,
-                                },
+                                // DON'T replace with translations, this is hardcoded
+                                { label: "True", value: 1 },
+                                { label: "False", value: 0 },
                               ]);
                             } else {
                               replace([{ label: "", value: 0 }]);

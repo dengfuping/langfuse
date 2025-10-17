@@ -329,8 +329,6 @@ const translation = {
       addNewScoreConfigTitle: "Add new score config",
       addCategory: "Add category",
       removeCategory: "Remove category",
-      true: "True",
-      false: "False",
       description: "Description",
       descriptionOptional: "Description (optional)",
       provideOptionalDescription: "Provide an optional description of the score config...",
