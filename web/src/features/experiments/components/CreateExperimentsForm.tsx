@@ -233,7 +233,7 @@ export const CreateExperimentsForm = ({
                 {!existingRemoteExperiment.data && (
                   <Button
                     variant="outline"
-                    title="Set up remote dataset run in UI trigger"
+                    title={t("dataset.actions.setupRemoteDatasetRunTrigger")}
                     className="h-8 w-8 flex-shrink-0"
                     size="icon"
                     onClick={() => setShowRemoteExperimentUpsertForm(true)}

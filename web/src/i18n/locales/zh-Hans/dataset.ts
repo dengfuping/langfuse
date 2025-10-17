@@ -35,6 +35,7 @@ const translation = {
     duplicateConfirmation: "您确定要复制此数据集及其所有数据项吗？",
     manageEvaluators: "管理评估器",
     newDatasetRun: "新建数据集运行",
+    setupRemoteDatasetRunTrigger: "在UI中设置远程数据集运行触发器",
   },
   pages: {
     title: "数据集",
@@ -137,6 +138,17 @@ const translation = {
     unknownError: "未知错误",
     datasetNameAlreadyExists: "数据集名称已存在。",
     pleaseTypeCorrectDatasetName: "请输入正确的数据集名称以确认删除",
+    failedToTriggerDatasetRun: "触发数据集运行失败",
+    datasetItemNotFound: "未找到数据集项",
+    datasetNotFound: "未找到数据集",
+    datasetRunNotFound: "未找到数据集运行",
+    oneOrMoreDatasetsNotFound: "未找到一个或多个数据集",
+    mustProvideDatasetRunIdOrItemId: "必须提供数据集运行ID或数据集项ID",
+    noRemoteExperimentUrlConfigured: "未为此数据集配置远程实验URL",
+    failedToFetchDatasetRuns: "从Clickhouse获取数据集运行失败",
+  },
+  placeholders: {
+    selectDataset: "选择数据集",
   },
   upload: {
     addItemsToDataset: "向数据集添加数据项",

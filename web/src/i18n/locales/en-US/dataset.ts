@@ -35,6 +35,7 @@ const translation = {
     duplicateConfirmation: "Are you sure you want to duplicate this dataset and all of its items?",
     manageEvaluators: "Manage Evaluators",
     newDatasetRun: "New dataset run",
+    setupRemoteDatasetRunTrigger: "Set up remote dataset run in UI trigger",
   },
   pages: {
     title: "Datasets",
@@ -139,6 +140,17 @@ const translation = {
     unknownError: "Unknown error",
     datasetNameAlreadyExists: "Dataset name already exists.",
     pleaseTypeCorrectDatasetName: "Please type the correct dataset name to confirm deletion",
+    failedToTriggerDatasetRun: "Failed to trigger dataset run",
+    datasetItemNotFound: "Dataset item not found",
+    datasetNotFound: "Dataset not found",
+    datasetRunNotFound: "Dataset run not found",
+    oneOrMoreDatasetsNotFound: "One or more datasets not found",
+    mustProvideDatasetRunIdOrItemId: "Must provide either datasetRunId or datasetItemId",
+    noRemoteExperimentUrlConfigured: "No remoteExperiment URL configured for this dataset",
+    failedToFetchDatasetRuns: "Failed to fetch dataset runs from clickhouse",
+  },
+  placeholders: {
+    selectDataset: "Select a dataset",
   },
   upload: {
     addItemsToDataset: "Add items to dataset",

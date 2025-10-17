@@ -210,7 +210,7 @@ export const PromptExperimentsForm = ({
     onSuccess: handleExperimentSuccess ?? (() => {}),
     onError: (error) => {
       showErrorToast(
-        error.message || "Failed to trigger dataset run",
+        error.message || t("dataset.errors.failedToTriggerDatasetRun"),
         "Please try again.",
       );
     },
@@ -564,7 +564,9 @@ export const PromptExperimentsForm = ({
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select a dataset" />
+                        <SelectValue
+                          placeholder={t("dataset.placeholders.selectDataset")}
+                        />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
